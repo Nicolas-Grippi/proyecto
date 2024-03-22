@@ -87,6 +87,54 @@ body{
     background-color: rgba(85, 83, 35, 0.644)
 }
 
+@media (max-width:1024px){
+    .header-index{
+        justify-content: space-around;
+        background-color: blue;
+    }
+    
+    .navBar{
+        display: flex;
+        list-style: none;
+        gap: 50px;
+        margin: 0px 50px;
+    }
+        
+    
+    .navBar li a{
+        text-decoration: none;
+        color: #000000;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    }
+
+    @media (max-width:768px){
+        .header-index{
+            justify-content: space-around;
+            background-color: red;
+        }
+
+        .navBar{
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            margin: 0px 20px;
+        }
+            
+        
+        .navBar li a{
+            text-decoration: none;
+            color: #000000;
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+
+
+
 /* ACA EMPIEZA LOS MAS VENDIDOS**/
 
 .bodyLVM{
