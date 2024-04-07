@@ -1,0 +1,191 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif; }
+
+.headerIndex {
+  background-color: #6C3428;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  /* Reducir el padding del encabezado */ }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6C3428;
+  text-decoration: none; }
+
+nav div ul {
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  gap: 32px; }
+
+nav div ul li a {
+  text-decoration: none;
+  color: #050505; }
+
+nav #toggle, nav label {
+  display: none; }
+
+/* Estilos para el contenido principal */
+.header-back {
+  background-image: url("../assets/img/Persona.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 671px;
+  padding-left: 45%;
+  padding-top: 3%; }
+  .header-back h1 {
+    font-size: 40px;
+    color: #050505;
+    text-shadow: -5px 0px 7px #ff7b00; }
+
+footer {
+  background-color: #6C3428;
+  /* Fondo del pie de página */
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; }
+
+h3 {
+  color: #CEE6F3;
+  margin: 0; }
+
+.footer-mp {
+  width: 70%; }
+  .footer-mp img {
+    width: 115px; }
+
+.footer-redes {
+  width: 15%; }
+  .footer-redes img {
+    width: 40px; }
+
+@media screen and (max-width: 768px) {
+  .header-back {
+    height: 584px;
+    /* Ajustar altura para pantalla más pequeña */ }
+  nav .nav {
+    width: 100%;
+    height: 0; }
+  nav ul {
+    gap: 1rem;
+    /* Ajustar el espacio entre elementos */ }
+  nav #toggle, nav label {
+    display: none; }
+  .footer-mp,
+  .footer-redes {
+    width: 100%;
+    /* Hacer los elementos de pie de página ocupar todo el ancho */
+    text-align: center;
+    /* Centrar texto en pantalla pequeña */ } }
+
+@media screen and (max-width: 320px) {
+  .navbar
+nav .menu {
+    width: 100%;
+    height: 0%;
+    overflow: hidden; }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0; }
+  nav label {
+    display: inline-flex;
+    cursor: pointer; }
+  nav #toggle:checked ~ .menu {
+    height: 100%; }
+  .header-back {
+    width: 100%;
+    height: 31.25rem;
+    background-image: url("../assets/img/Persona.png");
+    background-position: 100%;
+    background-size: 100% 100%; }
+  .footer-mp,
+  .footer-redes {
+    width: 100%;
+    /* Hacer los elementos de pie de página ocupar todo el ancho */
+    text-align: center;
+    /* Centrar texto en pantalla pequeña */ }
+  .footer-redes img {
+    width: 30px;
+    /* Reducir el ancho de las imágenes de redes sociales */ } }
+
+/*EMPIEZA LOS MAS VENDIDOS---------------------------------*/
+.headerMasVendido {
+  color: #050505;
+  display: flex;
+  margin-left: 500px;
+  align-items: center;
+  padding: 10px 20px; }
+
+.navBar2 {
+  text-align: center;
+  list-style-type: none;
+  padding: 20px;
+  display: flex; }
+
+.navBar2 li {
+  margin-right: 80px; }
+
+.navBar2 li a {
+  color: #CEE6F3;
+  text-decoration: none;
+  transition: color 0.3s ease; }
+
+.navBar2 li a:hover {
+  color: #ff0000; }
+
+.contenedorPadre {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px; }
+
+.contenedorPlacard,
+.contenedorMesa,
+.contenedorDeposito {
+  text-align: center; }
+
+.contenedorPlacard img,
+.contenedorMesa img,
+.contenedorDeposito img {
+  width: 300px; }
+
+.footer2 {
+  background-color: #6C3428;
+  width: 100%;
+  display: flex;
+  column-gap: 55%;
+  position: fixed;
+  bottom: 0; }
+
+.footer2 h3 {
+  color: #CEE6F3; }
+
+.footer-mp2 {
+  width: 50%;
+  margin: 5px; }
+
+.footer-mp2 img {
+  width: 115px; }
+
+.footer-redes2 {
+  width: 50%; }
+
+.footer-redes2 img {
+  width: 50px;
+  margin: 3px; }
