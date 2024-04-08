@@ -7,7 +7,8 @@
   box-sizing: border-box; }
 
 body {
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  background-color: #6C3428; }
 
 .headerIndex {
   background-color: #6C3428;
@@ -19,20 +20,21 @@ body {
 nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
   background-color: #6C3428;
-  text-decoration: none; }
+  text-decoration: none;
+  gap: 100px; }
 
 nav div ul {
   display: flex;
   list-style: none;
   text-decoration: none;
-  gap: 32px; }
+  gap: 20px; }
 
 nav div ul li a {
   text-decoration: none;
-  color: #050505; }
+  color: #050505;
+  font-size: 28px; }
 
 nav #toggle, nav label {
   display: none; }
@@ -95,8 +97,7 @@ h3 {
     /* Centrar texto en pantalla pequeña */ } }
 
 @media screen and (max-width: 320px) {
-  .navbar
-nav .menu {
+  nav .menu {
     width: 100%;
     height: 0%;
     overflow: hidden; }
@@ -126,34 +127,18 @@ nav .menu {
     /* Reducir el ancho de las imágenes de redes sociales */ } }
 
 /*EMPIEZA LOS MAS VENDIDOS---------------------------------*/
-.headerMasVendido {
-  color: #050505;
-  display: flex;
-  margin-left: 500px;
-  align-items: center;
-  padding: 10px 20px; }
-
-.navBar2 {
-  text-align: center;
-  list-style-type: none;
-  padding: 20px;
-  display: flex; }
-
-.navBar2 li {
-  margin-right: 80px; }
-
-.navBar2 li a {
-  color: #CEE6F3;
-  text-decoration: none;
-  transition: color 0.3s ease; }
-
-.navBar2 li a:hover {
-  color: #ff0000; }
+.headerLVM {
+  background-color: #6C3428;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  /* Reducir el padding del encabezado */ }
 
 .contenedorPadre {
   display: flex;
   justify-content: space-around;
-  margin-top: 50px; }
+  margin-top: 50px;
+  gap: 20px; }
 
 .contenedorPlacard,
 .contenedorMesa,
@@ -165,27 +150,139 @@ nav .menu {
 .contenedorDeposito img {
   width: 300px; }
 
-.footer2 {
+.contenedorPlacard p,
+.contenedorMesa p,
+.contenedorDeposito p {
+  font-size: 16px; }
+
+.footerLVM {
   background-color: #6C3428;
   width: 100%;
+  height: 20px;
   display: flex;
-  column-gap: 55%;
-  position: fixed;
-  bottom: 0; }
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-top: 200px; }
 
-.footer2 h3 {
-  color: #CEE6F3; }
+h3 {
+  color: #CEE6F3;
+  margin: 0; }
 
-.footer-mp2 {
-  width: 50%;
-  margin: 5px; }
+.footer-mp {
+  width: 70%; }
+  .footer-mp img {
+    width: 115px; }
 
-.footer-mp2 img {
-  width: 115px; }
+.footer-redes {
+  width: 15%; }
+  .footer-redes img {
+    width: 40px; }
 
-.footer-redes2 {
-  width: 50%; }
+@media screen and (max-width: 768px) {
+  nav .nav {
+    width: 100%;
+    height: 0; }
+  nav ul {
+    gap: 1rem;
+    /* Ajustar el espacio entre elementos */ }
+  nav #toggle, nav label {
+    display: none; }
+  .footer-mp,
+  .footer-redes {
+    width: 100%;
+    /* Hacer los elementos de pie de página ocupar todo el ancho */
+    text-align: center;
+    /* Centrar texto en pantalla pequeña */ } }
 
-.footer-redes2 img {
-  width: 50px;
-  margin: 3px; }
+@media screen and (max-width: 320px) {
+  nav .menu {
+    width: 100%;
+    height: 0%;
+    overflow: hidden; }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0; }
+  nav label {
+    display: inline-flex;
+    cursor: pointer; }
+  nav #toggle:checked ~ .menu {
+    height: 100%; }
+  .footer-mp,
+  .footer-redes {
+    width: 100%;
+    /* Hacer los elementos de pie de página ocupar todo el ancho */
+    text-align: center;
+    /* Centrar texto en pantalla pequeña */ }
+  .footer-redes img {
+    width: 30px;
+    /* Reducir el ancho de las imágenes de redes sociales */ } }
+
+/*EMPIEZA QUIENES SOMOS*/
+.headerQS {
+  background-color: #6C3428;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  /* Reducir el padding del encabezado */ }
+
+.contenedorUno {
+  width: 80%;
+  margin: 50px;
+  margin-left: 70px;
+  font-size: 20px;
+  padding-left: 120px; }
+  .contenedorUno p {
+    margin-top: 20px;
+    font-size: 20px; }
+
+.cajas {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin-right: 100px;
+  margin-top: 100px;
+  padding: 20px; }
+
+.cajaUno,
+.cajaDos,
+.cajaTres {
+  width: 100%;
+  height: 50px; }
+
+.cajaUno h2,
+.cajaDos h2,
+.cajaTres h2 {
+  width: 90%;
+  height: 50px;
+  background-color: #DFA878;
+  text-align: center;
+  font-size: 20px; }
+
+.cajaUno p,
+.cajaDos p,
+.cajaTres p {
+  width: 90%;
+  height: 100px;
+  font-size: 20px;
+  background-color: #BA704F;
+  text-align: center; }
+
+.footerQS {
+  background-color: #6C3428;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-top: 200px; }
+
+/*EMPIEZA SERVICIOS*/
+.headerServ {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10%; }
