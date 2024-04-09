@@ -7,34 +7,38 @@
     box-sizing: border-box;
   }
   
-  // Variables
-  $primary-color: #050505;
-  $secondary-color: #6C3428;
-  $font-family: "Lato", sans-serif;
   
-  // Estilos generales
+$primary-color: #050505;
+$secondary-color: #6C3428;
+$font-family: "Lato", sans-serif;
+$header-bg: #333;
+$menu-bg: #333;
+$menu-item-color: #fff;
+$menu-item-hover-color: #ccc;
+  
+  
   body {
     font-family: $font-family;
     background-color: $secondary-color;
   }
 
   .headerIndex {
-      background-color: #6C3428;
+    background-color: #6C3428;
     width: 100%;
     margin: 0;
-    padding: 1rem; /* Reducir el padding del encabezado */
+    padding: 1rem; 
   }
+
   nav{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    align-items:center;
     background-color: #6C3428;
     text-decoration: none;
-    gap: 100px;
+    
   }
 
 nav div ul{
-    display: flex;
+  display: flex;
     list-style: none;
     text-decoration: none;
     gap: 20px;
@@ -50,7 +54,7 @@ nav div ul li a{
 nav #toggle, nav label{
   display: none;
 }
-  /* Estilos para el contenido principal */
+  
   .header-back {
     background-image: url('../assets/img/Persona.png');
     background-size: cover;
@@ -98,21 +102,47 @@ nav #toggle, nav label{
   }
   
   @media screen and (max-width: 768px) {
-    .header-back {
-      height: 584px; /* Ajustar altura para pantalla más pequeña */
     
-    }
-    nav .nav {
-        width: 100%;
-        height: 0;
-      
-    }
-    nav ul {
-      gap: 1rem; /* Ajustar el espacio entre elementos */
-    }   
+    .headerIndex {
+      background-color: #6C3428;
+    width: 100%;
+    margin: 0;
   
+  }
+    
+    .header-back {
+      height: 584px; 
+    }
+
+    nav{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background-color: #6C3428;
+      text-decoration: none;
+      gap: 10px;
+     
+      div ul{
+      display: flex;
+      list-style: none;
+      text-decoration: none;
+      
+       li a{
+    text-decoration: none;
+    color: #050505;
+    font-size: 20px;
+    
+  }
+}
+    }
+  
+ 
     nav #toggle, nav label{
       display: none;
+    }
+
+    .footerLVM{
+
     }
 
     .footer-mp,
@@ -123,25 +153,66 @@ nav #toggle, nav label{
   }
 
   @media screen and (max-width: 320px) {
-  
-    nav .menu{
-      width: 100%;
-      height: 0%;
-      overflow: hidden;
-      
-    }
 
-    nav ul {
-      flex-direction: column;
-      align-items: center;
-      padding: 8px 0;
+    .headerIndex {
+      background-color: $header-bg;
+      padding: 10px;
+    
+      nav {
+        display: flex;
+        align-items: center;
+        
+    
+        img {
+          height: 40px;
+          margin-right: 20px;
+        }
+    
+        input[type="checkbox"] {
+          display: none;
+        }
+    
+        label {
+          cursor: pointer;
+          color: #fff;
+          font-size: 16px;
+          margin-right: 20px;
+        }
+    
+        .menu {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background-color: $menu-bg;
+          padding: 10px;
+          
+    
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+    
+            li {
+              margin: 10px 0;
+    
+              a {
+                color: $menu-item-color;
+                text-decoration: none;
+                transition: color 0.3s ease-in-out;
+                font-size: 16px;
+                &:hover {
+                  color: $menu-item-hover-color;
+                }
+              }
+            }
+          }
+        }
+    
+        input[type="checkbox"]:checked ~ .menu {
+          display: flex;
+        }
+      }
     }
-  
-    nav label{
-      display: inline-flex;
-      cursor: pointer;      
-    }
-
     nav #toggle:checked ~ .menu{
       height: 100%;
     } 
@@ -155,14 +226,54 @@ nav #toggle, nav label{
 
     }
 
+   .contenedorPadre{
+
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+   }
+
+   .contenedorPlacard,
+.contenedorMesa,
+.contenedorDeposito {
+    text-align: center;
+}
+.contenedorPlacard img,
+.contenedorMesa img,
+.contenedorDeposito img {
+    width: 100px;
+}
+
+    .footerLVM{
+      background-color: $secondary-color; 
+      width: 100%;
+      height: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1px;
+      margin-top: 150px;
+    }
+
     .footer-mp,
     .footer-redes {
       width: 100%; /* Hacer los elementos de pie de página ocupar todo el ancho */
       text-align: center; /* Centrar texto en pantalla pequeña */
     }
-  
-    .footer-redes img {
-      width: 30px; /* Reducir el ancho de las imágenes de redes sociales */
+    .footer-mp {
+      width: 70%;
+    
+      img {
+        width: 115px;
+      }
+    }
+    
+    .footer-redes {
+      width: 15%;
+    
+      img {
+        width: 40px;
+      }
     }
   }
   
