@@ -346,3 +346,78 @@ h3 {
   align-items: center;
   width: 100%;
   height: 10%; }
+
+.cajaServ {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+  width: 100%; }
+
+.grid-caja {
+  border: 1px solid #ccc;
+  padding: 20px; }
+
+img {
+  max-width: 100%; }
+
+/* EMPIEZA CONTACTOS */
+.navContacto div ul li a {
+  align-items: center; }
+
+.navContacto div ul li a {
+  padding-left: 50px; }
+
+.mainContacto {
+  width: 100%; }
+
+.Escribenos {
+  width: 90%;
+  text-align: center;
+  gap: 20px;
+  padding: 10px;
+  padding-left: 100px;
+  font-size: 24px; }
+
+.tabla {
+  width: 80%;
+  justify-content: space-between;
+  padding: 20px;
+  padding-left: 150px;
+  font-size: 16px; }
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box; }
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold; }
+
+input[type="submit"] {
+  background-color: #050505;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer; }
+
+input[type="submit"]:hover {
+  background-color: #45a049; }
+
+.footerContacto {
+  background-color: #6C3428;
+  max-width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 200px; }
