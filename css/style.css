@@ -76,7 +76,7 @@ h3 {
 
 @media screen and (max-width: 768px) {
   .headerIndex,
-  .headerContacto {
+  .header2 {
     background-color: #6C3428;
     width: 100%;
     margin: 0; }
@@ -110,6 +110,9 @@ h3 {
   .headerIndex {
     background-color: #333;
     padding: 10px; }
+    .headerIndex .header2 {
+      background-color: #333;
+      padding: 10px; }
     .headerIndex nav {
       display: flex;
       align-items: center; }
@@ -189,13 +192,6 @@ h3 {
       width: 40px; } }
 
 /*EMPIEZA LOS MAS VENDIDOS---------------------------------*/
-.headerLVM {
-  background-color: #6C3428;
-  width: 100%;
-  margin: 0;
-  padding: 1rem;
-  /* Reducir el padding del encabezado */ }
-
 .contenedorPadre {
   display: flex;
   justify-content: space-around;
@@ -282,13 +278,6 @@ h3 {
     /* Reducir el ancho de las imágenes de redes sociales */ } }
 
 /*EMPIEZA QUIENES SOMOS*/
-.headerQS {
-  background-color: #6C3428;
-  width: 100%;
-  margin: 0;
-  padding: 1rem;
-  /* Reducir el padding del encabezado */ }
-
 .contenedorUno {
   width: 80%;
   margin: 50px;
@@ -342,13 +331,6 @@ h3 {
   margin-top: 200px; }
 
 /*EMPIEZA SERVICIOS*/
-.headerServ {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 10%; }
-
 .cajaServ {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -364,43 +346,11 @@ img {
   max-width: 100%; }
 
 /* EMPIEZA CONTACTOS */
-nav {
-  display: flex;
+.navContacto div ul li a {
   align-items: center; }
-  nav img {
-    height: 40px;
-    margin-right: 20px; }
-  nav input[type="checkbox"] {
-    display: none; }
-  nav label {
-    cursor: pointer;
-    color: #fff;
-    font-size: 16px;
-    margin-right: 20px; }
-  nav .menu {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #333;
-    padding: 10px; }
-    nav .menu ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0; }
-      nav .menu ul li {
-        margin: 10px 0; }
-        nav .menu ul li a {
-          color: #fff;
-          text-decoration: none;
-          transition: color 0.3s ease-in-out;
-          font-size: 16px; }
-          nav .menu ul li a:hover {
-            color: #ccc; }
-  nav input[type="checkbox"]:checked ~ .menu {
-    display: flex; }
 
-nav #toggle:checked ~ .menu {
-  height: 100%; }
+.navContacto div ul li a {
+  padding-left: 50px; }
 
 .mainContacto {
   width: 100%; }
