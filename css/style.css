@@ -49,7 +49,8 @@ nav #toggle, nav label {
     color: #050505;
     text-shadow: -5px 0px 7px #ff7b00; }
 
-footer {
+.footer,
+.footerContacto {
   background-color: #6C3428;
   /* Fondo del pie de página */
   width: 100%;
@@ -74,7 +75,8 @@ h3 {
     width: 40px; }
 
 @media screen and (max-width: 768px) {
-  .headerIndex {
+  .headerIndex,
+  .headerContacto {
     background-color: #6C3428;
     width: 100%;
     margin: 0; }
@@ -362,17 +364,49 @@ img {
   max-width: 100%; }
 
 /* EMPIEZA CONTACTOS */
-.navContacto div ul li a {
+nav {
+  display: flex;
   align-items: center; }
+  nav img {
+    height: 40px;
+    margin-right: 20px; }
+  nav input[type="checkbox"] {
+    display: none; }
+  nav label {
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    margin-right: 20px; }
+  nav .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    padding: 10px; }
+    nav .menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      nav .menu ul li {
+        margin: 10px 0; }
+        nav .menu ul li a {
+          color: #fff;
+          text-decoration: none;
+          transition: color 0.3s ease-in-out;
+          font-size: 16px; }
+          nav .menu ul li a:hover {
+            color: #ccc; }
+  nav input[type="checkbox"]:checked ~ .menu {
+    display: flex; }
 
-.navContacto div ul li a {
-  padding-left: 50px; }
+nav #toggle:checked ~ .menu {
+  height: 100%; }
 
 .mainContacto {
   width: 100%; }
 
 .Escribenos {
-  width: 90%;
+  width: 100%;
   text-align: center;
   gap: 20px;
   padding: 10px;
@@ -421,3 +455,44 @@ input[type="submit"]:hover {
   justify-content: space-between;
   align-items: center;
   padding-top: 200px; }
+
+@media screen and (max-width: 320px) {
+  .Escribenos {
+    width: 100%;
+    text-align: center;
+    gap: 20px;
+    padding: 10px;
+    padding-left: 70px;
+    font-size: 16px; }
+  .tabla {
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    padding-left: 70px;
+    font-size: 14px; }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold; }
+  input[type="submit"] {
+    background-color: #050505;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer; }
+  input[type="submit"]:hover {
+    background-color: #45a049; }
+  .footer-mp img,
+  .footer-redes img {
+    font-size: 10px; } }

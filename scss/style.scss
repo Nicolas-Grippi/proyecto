@@ -70,7 +70,8 @@ nav #toggle, nav label{
     }
   }
   
-  footer {
+  .footer, 
+  .footerContacto {
     background-color: $secondary-color; /* Fondo del pie de página */
     width: 100%;
     height: 120px;
@@ -103,7 +104,8 @@ nav #toggle, nav label{
   
   @media screen and (max-width: 768px) {
     
-    .headerIndex {
+    .headerIndex,
+    .headerContacto {
       background-color: #6C3428;
     width: 100%;
     margin: 0;
@@ -139,10 +141,6 @@ nav #toggle, nav label{
  
     nav #toggle, nav label{
       display: none;
-    }
-
-    .footerLVM{
-
     }
 
     .footer-mp,
@@ -509,19 +507,71 @@ img {
 
 /* EMPIEZA CONTACTOS */
 
-.navContacto div ul li a{
-align-items: center;
+nav {
+  display: flex;
+  align-items: center;
+  
+
+  img {
+    height: 40px;
+    margin-right: 20px;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: $menu-bg;
+    padding: 10px;
+    
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 10px 0;
+
+        a {
+          color: $menu-item-color;
+          text-decoration: none;
+          transition: color 0.3s ease-in-out;
+          font-size: 16px;
+          &:hover {
+            color: $menu-item-hover-color;
+          }
+        }
+      }
+    }
+  }
+
+  input[type="checkbox"]:checked ~ .menu {
+    display: flex;
+  }
 }
 
-.navContacto div ul li a{
-  padding-left: 50px;
-  }
+nav #toggle:checked ~ .menu{
+height: 100%;
+} 
+
 .mainContacto{
   width: 100%;
 }
 
 .Escribenos{
-  width: 90%;
+  width: 100%;
   text-align: center;
   gap: 20px;
   padding: 10px;
@@ -583,4 +633,66 @@ align-items: center;
 }
 
 
+
+
+@media screen and (max-width: 320px) {
+  .Escribenos{
+    width: 100%;
+    text-align: center;
+    gap: 20px;
+    padding: 10px;
+    padding-left: 70px;
+    font-size: 16px;
+  
+    }
+
+    .tabla{
+      width: 100%;
+      justify-content: space-between;  
+    padding: 20px;
+    padding-left: 70px; 
+    font-size: 14px;
+    }
+  
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box; 
+       }
+    
+  
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    input[type="submit"] {
+        background-color: $primary-color;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+       
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    .footer-mp img,
+    .footer-redes img{
+      font-size: 10px ;
+    }
+
+
+}
 
