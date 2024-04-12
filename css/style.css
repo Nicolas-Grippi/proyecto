@@ -16,6 +16,12 @@ body {
   margin: 0;
   padding: 1rem; }
 
+.header2 {
+  background-color: #6C3428;
+  width: 100%;
+  margin: 0;
+  padding: 1rem; }
+
 nav {
   display: flex;
   align-items: center;
@@ -33,9 +39,6 @@ nav div ul li a {
   color: #050505;
   font-size: 28px; }
 
-nav #toggle, nav label {
-  display: none; }
-
 .header-back {
   background-image: url("../assets/img/Persona.png");
   background-size: cover;
@@ -49,149 +52,6 @@ nav #toggle, nav label {
     color: #050505;
     text-shadow: -5px 0px 7px #ff7b00; }
 
-.footer,
-.footerContacto {
-  background-color: #6C3428;
-  /* Fondo del pie de página */
-  width: 100%;
-  height: 120px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px; }
-
-h3 {
-  color: #CEE6F3;
-  margin: 0; }
-
-.footer-mp {
-  width: 70%; }
-  .footer-mp img {
-    width: 115px; }
-
-.footer-redes {
-  width: 15%; }
-  .footer-redes img {
-    width: 40px; }
-
-@media screen and (max-width: 768px) {
-  .headerIndex,
-  .header2 {
-    background-color: #6C3428;
-    width: 100%;
-    margin: 0; }
-  .header-back {
-    height: 584px; }
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    background-color: #6C3428;
-    text-decoration: none;
-    gap: 10px; }
-    nav div ul {
-      display: flex;
-      list-style: none;
-      text-decoration: none; }
-      nav div ul li a {
-        text-decoration: none;
-        color: #050505;
-        font-size: 20px; }
-  nav #toggle, nav label {
-    display: none; }
-  .footer-mp,
-  .footer-redes {
-    width: 100%;
-    /* Hacer los elementos de pie de página ocupar todo el ancho */
-    text-align: center;
-    /* Centrar texto en pantalla pequeña */ } }
-
-@media screen and (max-width: 320px) {
-  .headerIndex {
-    background-color: #333;
-    padding: 10px; }
-    .headerIndex .header2 {
-      background-color: #333;
-      padding: 10px; }
-    .headerIndex nav {
-      display: flex;
-      align-items: center; }
-      .headerIndex nav img {
-        height: 40px;
-        margin-right: 20px; }
-      .headerIndex nav input[type="checkbox"] {
-        display: none; }
-      .headerIndex nav label {
-        cursor: pointer;
-        color: #fff;
-        font-size: 16px;
-        margin-right: 20px; }
-      .headerIndex nav .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        padding: 10px; }
-        .headerIndex nav .menu ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0; }
-          .headerIndex nav .menu ul li {
-            margin: 10px 0; }
-            .headerIndex nav .menu ul li a {
-              color: #fff;
-              text-decoration: none;
-              transition: color 0.3s ease-in-out;
-              font-size: 16px; }
-              .headerIndex nav .menu ul li a:hover {
-                color: #ccc; }
-      .headerIndex nav input[type="checkbox"]:checked ~ .menu {
-        display: flex; }
-  nav #toggle:checked ~ .menu {
-    height: 100%; }
-  .header-back {
-    width: 100%;
-    height: 31.25rem;
-    background-image: url("../assets/img/Persona.png");
-    background-position: 100%;
-    background-size: 100% 100%; }
-  .contenedorPadre {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 50px; }
-  .contenedorPlacard,
-  .contenedorMesa,
-  .contenedorDeposito {
-    text-align: center; }
-  .contenedorPlacard img,
-  .contenedorMesa img,
-  .contenedorDeposito img {
-    width: 100px; }
-  .footerLVM {
-    background-color: #6C3428;
-    width: 100%;
-    height: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1px;
-    margin-top: 150px; }
-  .footer-mp,
-  .footer-redes {
-    width: 100%;
-    /* Hacer los elementos de pie de página ocupar todo el ancho */
-    text-align: center;
-    /* Centrar texto en pantalla pequeña */ }
-  .footer-mp {
-    width: 70%; }
-    .footer-mp img {
-      width: 115px; }
-  .footer-redes {
-    width: 15%; }
-    .footer-redes img {
-      width: 40px; } }
-
-/*EMPIEZA LOS MAS VENDIDOS---------------------------------*/
 .contenedorPadre {
   display: flex;
   justify-content: space-around;
@@ -213,71 +73,6 @@ h3 {
 .contenedorDeposito p {
   font-size: 16px; }
 
-.footerLVM {
-  background-color: #6C3428;
-  width: 100%;
-  height: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  margin-top: 200px; }
-
-h3 {
-  color: #CEE6F3;
-  margin: 0; }
-
-.footer-mp {
-  width: 70%; }
-  .footer-mp img {
-    width: 115px; }
-
-.footer-redes {
-  width: 15%; }
-  .footer-redes img {
-    width: 40px; }
-
-@media screen and (max-width: 768px) {
-  nav .nav {
-    width: 100%;
-    height: 0; }
-  nav ul {
-    gap: 1rem;
-    /* Ajustar el espacio entre elementos */ }
-  nav #toggle, nav label {
-    display: none; }
-  .footer-mp,
-  .footer-redes {
-    width: 100%;
-    /* Hacer los elementos de pie de página ocupar todo el ancho */
-    text-align: center;
-    /* Centrar texto en pantalla pequeña */ } }
-
-@media screen and (max-width: 320px) {
-  nav .menu {
-    width: 100%;
-    height: 0%;
-    overflow: hidden; }
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-    padding: 8px 0; }
-  nav label {
-    display: inline-flex;
-    cursor: pointer; }
-  nav #toggle:checked ~ .menu {
-    height: 100%; }
-  .footer-mp,
-  .footer-redes {
-    width: 100%;
-    /* Hacer los elementos de pie de página ocupar todo el ancho */
-    text-align: center;
-    /* Centrar texto en pantalla pequeña */ }
-  .footer-redes img {
-    width: 30px;
-    /* Reducir el ancho de las imágenes de redes sociales */ } }
-
-/*EMPIEZA QUIENES SOMOS*/
 .contenedorUno {
   width: 80%;
   margin: 50px;
@@ -320,17 +115,6 @@ h3 {
   background-color: #BA704F;
   text-align: center; }
 
-.footerQS {
-  background-color: #6C3428;
-  width: 100%;
-  height: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  margin-top: 200px; }
-
-/*EMPIEZA SERVICIOS*/
 .cajaServ {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -344,13 +128,6 @@ h3 {
 
 img {
   max-width: 100%; }
-
-/* EMPIEZA CONTACTOS */
-.navContacto div ul li a {
-  align-items: center; }
-
-.navContacto div ul li a {
-  padding-left: 50px; }
 
 .mainContacto {
   width: 100%; }
@@ -397,52 +174,94 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #45a049; }
 
-.footerContacto {
+.footer {
   background-color: #6C3428;
-  max-width: 100%;
+  /* Fondo del pie de página */
+  width: 100%;
   height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 200px; }
+  padding: 20px; }
+
+h3 {
+  color: #CEE6F3;
+  margin: 0; }
+
+.footer-mp {
+  width: 70%; }
+  .footer-mp img {
+    width: 115px; }
+
+.footer-redes {
+  width: 15%; }
+  .footer-redes img {
+    width: 40px; }
+
+@media screen and (max-width: 768px) {
+  .headerIndex,
+  .header2 {
+    background-color: #6C3428;
+    width: 100%;
+    margin: 0; }
+  .header-back {
+    height: 584px; }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #6C3428;
+    text-decoration: none;
+    gap: 10px; }
+    nav div ul {
+      display: flex;
+      list-style: none;
+      text-decoration: none; }
+      nav div ul li a {
+        text-decoration: none;
+        color: #050505;
+        font-size: 20px; }
+  .footer-mp,
+  .footer-redes {
+    width: 100%;
+    text-align: center; } }
 
 @media screen and (max-width: 320px) {
-  .Escribenos {
+  .headerIndex {
+    background-color: #6C3428;
+    padding: 10px; }
+    .headerIndex .header2 {
+      background-color: #6C3428;
+      padding: 10px; }
+  .navbar {
+    display: flex;
+    align-items: center;
+    background-color: #6C3428;
+    text-decoration: none; }
+  .navbar div ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    gap: 20px; }
+  .navbar div ul li a {
+    text-decoration: none;
+    color: #050505;
+    font-size: 28px; }
+  .header-back {
     width: 100%;
-    text-align: center;
-    gap: 20px;
-    padding: 10px;
-    padding-left: 70px;
-    font-size: 16px; }
-  .tabla {
+    height: 31.25rem;
+    background-image: url("../assets/img/Persona.png");
+    background-position: 100%;
+    background-size: 100% 100%; }
+  .footer-mp,
+  .footer-redes {
     width: 100%;
-    justify-content: space-between;
-    padding: 20px;
-    padding-left: 70px;
-    font-size: 14px; }
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  textarea {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box; }
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold; }
-  input[type="submit"] {
-    background-color: #050505;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 3px;
-    cursor: pointer; }
-  input[type="submit"]:hover {
-    background-color: #45a049; }
-  .footer-mp img,
-  .footer-redes img {
-    font-size: 10px; } }
+    text-align: center; }
+  .footer-mp {
+    width: 70%; }
+    .footer-mp img {
+      width: 115px; }
+  .footer-redes {
+    width: 15%; }
+    .footer-redes img {
+      width: 40px; } }
