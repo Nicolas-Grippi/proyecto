@@ -1,0 +1,17 @@
+
+.header-back {
+    background-image: url('../assets/img/Persona.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 671px;
+    padding-left: 45%;
+    padding-top: 3%;
+  
+    h1 {
+      font-size: 40px;
+      color: $primary-color;
+      text-shadow: -5px 0px 7px rgb(255, 123, 0);
+  
+    }
+  }

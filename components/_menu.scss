@@ -1,0 +1,23 @@
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+  }
+  
+  .menu ul li a {
+    color: rgb(0, 0, 0);
+    margin-right: 50px;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  
+  .menu ul li a:hover {
+    color: rgb(255, 123, 0);
+    text-decoration: none;
+  }
+  
+  nav #toggle,
+  nav label {
+    display: none;
+  }
+  

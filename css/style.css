@@ -5,10 +5,6 @@
   padding: 0;
   box-sizing: border-box; }
 
-body {
-  font-family: "Lato", sans-serif;
-  background-color: #6C3428; }
-
 .nav-wraper {
   display: flex;
   flex-wrap: wrap;
@@ -28,25 +24,6 @@ body {
 .nav-wraper nav .logo-nav {
   width: 100px;
   padding: 8px; }
-
-.menu ul {
-  display: flex;
-  list-style: none;
-  gap: 12px; }
-
-.menu ul li a {
-  color: black;
-  margin-right: 50px;
-  font-size: 24px;
-  text-decoration: none; }
-
-.menu ul li a:hover {
-  color: #ff7b00;
-  text-decoration: none; }
-
-nav #toggle,
-nav label {
-  display: none; }
 
 .header-back {
   background-image: url("../assets/img/Persona.png");
@@ -238,29 +215,8 @@ input[type="submit"]:hover {
   align-items: center;
   padding: 20px; }
 
-.footerVendidos {
-  margin-top: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 20px; }
-
-.footerQuienesSomos {
-  margin-top: 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px; }
-
-.footerContacto {
-  margin-top: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px; }
-
 h3 {
-  color: #CEE6F3;
+  color: #000000;
   margin: 0; }
 
 .footer-mp {
@@ -272,6 +228,50 @@ h3 {
   width: 15%; }
   .footer-redes img {
     width: 40px; }
+
+.footerContacto {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; }
+
+.footerQuienesSomos {
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; }
+
+.footerVendidos {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px; }
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 12px; }
+
+.menu ul li a {
+  color: black;
+  margin-right: 50px;
+  font-size: 24px;
+  text-decoration: none; }
+
+.menu ul li a:hover {
+  color: #ff7b00;
+  text-decoration: none; }
+
+nav #toggle,
+nav label {
+  display: none; }
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #6C3428; }
 
 @media screen and (max-width: 1440px) {
   .nav-wraper {

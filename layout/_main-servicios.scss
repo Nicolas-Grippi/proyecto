@@ -1,0 +1,18 @@
+
+.cajaServ {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .grid-caja {
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+  }

@@ -1,0 +1,27 @@
+.nav-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $secondary-color;
+    color: $primary-color;
+  
+  }
+  
+  .nav-wraper nav {
+    display: flex;
+    align-items: center;
+    background-color: #6C3428;
+  
+  }
+  
+  .nav-wraper nav label {
+    padding-right: 20px;
+  }
+  
+  .nav-wraper nav .logo-nav {
+    width: 100px;
+    padding: 8px;
+  }
+  
+  
