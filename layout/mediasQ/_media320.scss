@@ -1,0 +1,255 @@
+@media (max-width: 320px){
+.nav-wraper {
+    background-color: #6C3428;
+    width: 100%;
+    margin: 0;
+  }
+
+  .header-back {
+    width: 100%;
+    height: 500px;
+    padding-left: 45%;
+    padding-top: 3%;
+
+    h1 {
+      font-size: 20px;
+      color: $primary-color;
+      text-shadow: -5px 0px 7px rgb(255, 123, 0);
+    }
+  }
+
+  .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 4px;
+    /* Ajusta el espacio entre elementos de la lista */
+  }
+
+  .menu ul li {
+    margin-right: -70px;
+    /* Ajusta el margen entre elementos de la lista */
+  }
+
+  .menu ul li a {
+    color: black;
+    font-size: 12px;
+    text-decoration: none;
+
+  }
+
+  .contenedorPadre {
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 100px;
+    gap: 20px;
+  }
+
+  .contenedorPlacard,
+  .contenedorMesa,
+  .contenedorDeposito {
+    text-align: center;
+  }
+
+  .contenedorPlacard img,
+  .contenedorMesa img,
+  .contenedorDeposito img {
+    width: 70px;
+  }
+
+  .contenedorPlacard p,
+  .contenedorMesa p,
+  .contenedorDeposito p {
+    font-size: 12px;
+  }
+
+  .contenedorPlacard h2,
+  .contenedorMesa h2,
+  .contenedorDeposito h2 {
+    font-size: 14px;
+  }
+
+  .contenedorUno {
+    width: 100%;
+    height: 200px;
+    margin: 2px;
+    font-size: 12px;
+    padding: 20px;
+
+    p {
+      width: 100%;
+      margin-top: 5px;
+      margin-right: 200px;
+      font-size: 14px;
+    }
+  }
+
+  .cajas {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-left: 10px;
+  }
+
+  .cajaUno,
+  .cajaDos,
+  .cajaTres {
+    width: 120%;
+    height: 10px;
+  }
+
+  .cajaUno h2,
+  .cajaDos h2,
+  .cajaTres h2 {
+    width: 110%;
+    height: 20px;
+    background-color: #DFA878;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .cajaUno p,
+  .cajaDos p,
+  .cajaTres p {
+    width: 110%;
+    height: 240px;
+    font-size: 12px;
+    background-color: #BA704F;
+    text-align: center;
+  }
+
+  .cajaServ {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+    padding: 20px;
+    width: 100%;
+    font-size: 12px;
+  }
+
+
+  .Escribenos {
+    width: 100%;
+    height: 170px;
+    gap: 15px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .tabla {
+    width: 100%;
+    height: 270px;
+    justify-content: space-between;
+    padding: 20px;
+    padding-left: 150px;
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input[type="submit"] {
+    background-color: $primary-color;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  .footer {
+    background-color: $secondary-color;
+    width: 150%;
+    height: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    gap: 15px;
+  }
+
+  .footerVendidos {
+    background-color: $secondary-color;
+    width: 150%;
+    height: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    gap: 5px;
+  }
+
+  .footerQuienesSomos {
+    background-color: $secondary-color;
+    width: 150%;
+    height: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    gap: 15px;
+  }
+
+  .footerContacto {
+    background-color: $secondary-color;
+    width: 150%;
+    height: 220px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    gap: 15px;
+  }
+
+  .footer h3,
+  .footerContacto h3,
+  .footerQuienesSomos h3,
+  .footerVendidos h3 {
+    color: #000000;
+    margin: 0;
+  }
+
+  .footer-mp {
+    width: 45%;
+    font-size: 12px;
+    justify-content: flex-end;
+    align-items: center;
+
+    img {
+      width: 55px;
+      margin-right: 20px;
+    }
+  }
+
+  .footer-redes {
+    width: 120%;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+
+    img {
+      width: 30px;
+      margin-left: 10px;
+    }
+  }
+}
