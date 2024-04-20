@@ -1,5 +1,8 @@
 .nav-wraper {
-  @include flex1;
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     background-color: $secondary-color;
     color: $primary-color;
   
@@ -8,7 +11,7 @@
   .nav-wraper nav {
     display: flex;
     align-items: center;
-    background-color: #6C3428;
+    background-color: #6c3428;
   
   }
   

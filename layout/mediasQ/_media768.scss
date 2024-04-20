@@ -31,20 +31,32 @@
     background-color: #6C3428;
     text-decoration: none;
     gap: 10px;
+    
 
     div ul {
-      display: flex;
+      flex-direction: column;
       list-style: none;
       text-decoration: none;
-
+      margin-right: 2000px;
+      width: 20%;
+      height: 220px;
+      z-index: 100;
+      position: relative;    
+      padding-top: 20px;  
+      background-color: $secondary-color;
       li a {
         text-decoration: none;
         color: #050505;
         font-size: 16px;
+        
       }
     }
   }
-
+  nav #toggle:checked~.menu {
+    height: 100%;
+    background: $secondary-color;
+    transition: 0.7s;
+}
   .contenedorPadre {
     height: 200px;
     display: flex;

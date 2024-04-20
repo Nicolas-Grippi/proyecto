@@ -16,7 +16,7 @@
 .nav-wraper nav {
   display: flex;
   align-items: center;
-  background-color: #6C3428; }
+  background-color: #6c3428; }
 
 .nav-wraper nav label {
   padding-right: 20px; }
@@ -273,7 +273,7 @@ body {
   font-family: "Lato", sans-serif;
   background-color: #6C3428; }
 
-@media screen and (max-width: 1440px) {
+@media (max-width: 1440px) {
   .nav-wraper {
     background-color: #6C3428;
     width: 100%;
@@ -347,7 +347,7 @@ body {
     .footer-redes img {
       width: 40px; } }
 
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .menu ul li a {
     color: black;
     margin-right: 50px;
@@ -412,7 +412,7 @@ body {
     font-size: 16px;
     margin-bottom: 20px; } }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   * {
     margin: 0;
     padding: 0;
@@ -438,13 +438,24 @@ body {
     text-decoration: none;
     gap: 10px; }
     nav div ul {
-      display: flex;
+      flex-direction: column;
       list-style: none;
-      text-decoration: none; }
+      text-decoration: none;
+      margin-right: 2000px;
+      width: 20%;
+      height: 220px;
+      z-index: 100;
+      position: relative;
+      padding-top: 20px;
+      background-color: #6C3428; }
       nav div ul li a {
         text-decoration: none;
         color: #050505;
         font-size: 16px; }
+  nav #toggle:checked ~ .menu {
+    height: 100%;
+    background: #6C3428;
+    transition: 0.7s; }
   .contenedorPadre {
     height: 200px;
     display: flex;
@@ -549,7 +560,169 @@ body {
       width: 40px;
       margin-left: 20px; } }
 
-@media screen and (max-width: 320px) {
+@media (max-width: 425px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
+  .nav-wraper {
+    background-color: #6C3428;
+    width: 100%;
+    margin: 0; }
+  .header-back {
+    width: 100%;
+    height: 800px;
+    padding-left: 45%;
+    padding-top: 3%; }
+    .header-back h1 {
+      margin-right: 30px;
+      font-size: 36px;
+      color: #050505;
+      text-shadow: -5px 0px 7px #ff7b00; }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #6C3428;
+    text-decoration: none;
+    gap: 10px; }
+    nav div ul {
+      flex-direction: column;
+      list-style: none;
+      text-decoration: none;
+      margin-right: 2000px;
+      width: 20%;
+      height: 220px;
+      z-index: 100;
+      position: relative;
+      padding-top: 20px;
+      background-color: #6C3428; }
+      nav div ul li a {
+        text-decoration: none;
+        color: #050505;
+        font-size: 14px; }
+  nav #toggle:checked ~ .menu {
+    height: 100%;
+    background: #6C3428;
+    transition: 0.7s; }
+  .contenedorPadre {
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    margin-top: 100px;
+    gap: 20px; }
+  .contenedorPlacard,
+  .contenedorMesa,
+  .contenedorDeposito {
+    text-align: center; }
+  .contenedorPlacard img,
+  .contenedorMesa img,
+  .contenedorDeposito img {
+    width: 300px; }
+  .contenedorPlacard p,
+  .contenedorMesa p,
+  .contenedorDeposito p {
+    font-size: 16px; }
+  .contenedorUno {
+    width: 90%;
+    margin: 10px;
+    font-size: 16px; }
+    .contenedorUno p {
+      margin-top: 18px;
+      font-size: 14px; }
+  .cajas {
+    display: flex;
+    flex-direction: row;
+    gap: 55px;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding: 20px; }
+  .cajaUno,
+  .cajaDos,
+  .cajaTres {
+    width: 100%;
+    height: 80px; }
+  .cajaUno h2,
+  .cajaDos h2,
+  .cajaTres h2 {
+    width: 150%;
+    height: 30px;
+    background-color: #DFA878;
+    text-align: center;
+    font-size: 16px; }
+  .cajaUno p,
+  .cajaDos p,
+  .cajaTres p {
+    width: 150%;
+    height: 220px;
+    font-size: 14px;
+    background-color: #BA704F;
+    text-align: center; }
+  .Escribenos {
+    width: 100%;
+    text-align: center;
+    gap: 20px;
+    padding: 10px;
+    padding-left: 100px;
+    font-size: 18px; }
+  .tabla {
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    padding-left: 100px;
+    font-size: 16px; }
+  .footer {
+    background-color: #6C3428;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    gap: 50px; }
+  .footerVendidos {
+    background-color: #6C3428;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    gap: 50px; }
+  .footerQuienesSomos {
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    gap: 170px; }
+  .footerContacto {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 100px; }
+  .footer h3 {
+    color: #CEE6F3;
+    margin: 0; }
+  .footer-mp {
+    width: 65%;
+    justify-content: flex-end;
+    align-items: center; }
+    .footer-mp img {
+      width: 75px;
+      margin-right: 10px; }
+  .footer-redes {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center; }
+    .footer-redes img {
+      width: 30px;
+      margin-left: 10px; } }
+
+@media (max-width: 320px) {
   .nav-wraper {
     background-color: #6C3428;
     width: 100%;
@@ -560,21 +733,34 @@ body {
     padding-left: 45%;
     padding-top: 3%; }
     .header-back h1 {
-      font-size: 20px;
+      font-size: 28px;
       color: #050505;
       text-shadow: -5px 0px 7px #ff7b00; }
-  .menu ul {
+  nav {
     display: flex;
-    list-style: none;
-    gap: 4px;
-    /* Ajusta el espacio entre elementos de la lista */ }
-  .menu ul li {
-    margin-right: -70px;
-    /* Ajusta el margen entre elementos de la lista */ }
-  .menu ul li a {
-    color: black;
-    font-size: 12px;
-    text-decoration: none; }
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #6C3428;
+    text-decoration: none;
+    gap: 10px; }
+    nav div ul {
+      flex-direction: column;
+      list-style: none;
+      text-decoration: none;
+      margin-right: 2000px;
+      width: 20%;
+      height: 220px;
+      z-index: 100;
+      position: relative;
+      padding-top: 20px;
+      background-color: #6C3428; }
+      nav div ul li a {
+        text-decoration: none;
+        color: #050505; }
+  nav #toggle:checked ~ .menu {
+    height: 100%;
+    background: #6C3428;
+    transition: 0.7s; }
   .contenedorPadre {
     height: 200px;
     display: flex;
@@ -600,7 +786,7 @@ body {
     font-size: 14px; }
   .contenedorUno {
     width: 100%;
-    height: 200px;
+    height: 250px;
     margin: 2px;
     font-size: 12px;
     padding: 20px; }
@@ -653,7 +839,7 @@ body {
     height: 270px;
     justify-content: space-between;
     padding: 20px;
-    padding-left: 150px;
+    padding-left: 100px;
     font-size: 14px; }
   input[type="text"],
   input[type="email"],
@@ -719,7 +905,8 @@ body {
   .footerQuienesSomos h3,
   .footerVendidos h3 {
     color: #000000;
-    margin: 0; }
+    margin: 0;
+    font-size: 14px; }
   .footer-mp {
     width: 45%;
     font-size: 12px;
