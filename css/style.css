@@ -275,7 +275,7 @@ body {
 
 @media (max-width: 1440px) {
   .nav-wraper {
-    background-color: #6C3428;
+    background-color: #8D6E63;
     width: 100%;
     margin: 0; }
   .header-back {
@@ -284,7 +284,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #6C3428;
+    background-color: #8D6E63;
     text-decoration: none;
     gap: 10px; }
     nav div ul {
@@ -336,7 +336,7 @@ body {
     align-items: center;
     padding: 20px; }
   h3 {
-    color: #CEE6F3;
+    color: #000000;
     margin: 0; }
   .footer-mp {
     width: 70%; }
@@ -418,7 +418,7 @@ body {
     padding: 0;
     box-sizing: border-box; }
   .nav-wraper {
-    background-color: #6C3428;
+    background-color: #8D6E63;
     width: 100%;
     margin: 0; }
   .header-back {
@@ -434,7 +434,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #6C3428;
+    background-color: #8D6E63;
     text-decoration: none;
     gap: 10px; }
     nav div ul {
@@ -543,7 +543,7 @@ body {
     padding: 10px;
     gap: 400px; }
   .footer h3 {
-    color: #CEE6F3;
+    color: #000000;
     margin: 0; }
   .footer-mp {
     width: 45%;
@@ -566,7 +566,7 @@ body {
     padding: 0;
     box-sizing: border-box; }
   .nav-wraper {
-    background-color: #6C3428;
+    background-color: #8D6E63;
     width: 100%;
     margin: 0; }
   .header-back {
@@ -583,7 +583,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #6C3428;
+    background-color: #8D6E63;
     text-decoration: none;
     gap: 10px; }
     nav div ul {
@@ -705,7 +705,7 @@ body {
     padding: 10px;
     gap: 100px; }
   .footer h3 {
-    color: #CEE6F3;
+    color: #000000;
     margin: 0; }
   .footer-mp {
     width: 65%;

@@ -6,7 +6,7 @@
   }
 
   .nav-wraper {
-    background-color: #6C3428;
+    background-color: $secondary-color;
     width: 100%;
     margin: 0;
   }
@@ -28,7 +28,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #6C3428;
+    background-color: $secondary-color;
     text-decoration: none;
     gap: 10px;
     
@@ -172,7 +172,7 @@
   }
 
   .footer h3 {
-    color: #CEE6F3;
+    color: #000000;
     margin: 0;
   }
 
