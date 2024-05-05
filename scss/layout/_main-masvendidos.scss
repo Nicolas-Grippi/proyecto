@@ -1,9 +1,10 @@
 .animacion {
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
-    -webkit-animation: text-pop-up-right 500ms ease-in 1s infinite both;
-    animation: text-pop-up-right 500ms ease-in 1s infinite both;
+    -webkit-animation: text-pop-up-right 500ms ease-in 1s 3 both;
+    animation: text-pop-up-right 500ms ease-in 1s 3 both;
 }
+
 
 @-webkit-keyframes text-pop-up-right {
     0% {
@@ -33,8 +34,8 @@
     }
 
     100% {
-        -webkit-transform: translateX(50px);
-        transform: translateX(50px);
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
         -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
         text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
@@ -42,25 +43,39 @@
 }
 
 
+
 .contenedorPadre {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Divide el contenedor en 4 columnas iguales */
     justify-content: space-around;
     margin-top: 50px;
     gap: 20px;
 }
 
-
-
 .contenedorPlacard,
 .contenedorMesa,
-.contenedorDeposito {
+.contenedorDeposito,
+.contenedorCajonera,
+.contenedorDesayunador,
+.contenedorEscritorio,
+.contenedorEstanteria,
+.contenedorCocina {
     text-align: center;
 }
 
 .contenedorPlacard img,
 .contenedorMesa img,
-.contenedorDeposito img {
+.contenedorDeposito img,
+.contenedorCajonera img,
+.contenedorDesayunador img,
+.contenedorEscritorio img,
+.contenedorEstanteria img,
+.contenedorCocina img {
     width: 300px;
+}
+
+.contenedorPadre div img {
+    transition: transform 0.3s ease-in-out; /* Transición suave durante 0.3 segundos */
 }
 
 .contenedorPadre div img:hover {
@@ -69,14 +84,24 @@
 
 .contenedorPlacard h2,
 .contenedorMesa h2,
-.contenedorDeposito h2 {
+.contenedorDeposito h2,
+.contenedorCajonera h2,
+.contenedorDesayunador h2,
+.contenedorEscritorio h2,
+.contenedorEstanteria h2,
+.contenedorCocina h2{
     margin-top: 20px;
     font-size: 18px;
 }
 
 .contenedorPlacard p,
 .contenedorMesa p,
-.contenedorDeposito p {
+.contenedorDeposito p,
+.contenedorCajonera p,
+.contenedorDesayunador p,
+.contenedorEscritorio p,
+.contenedorEstanteria p,
+.contenedorCocina p{
     margin-top: 20px;
     font-size: 16px;
     margin-bottom: 20px;
