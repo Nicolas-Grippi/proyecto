@@ -244,21 +244,36 @@ input[type="submit"]:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px; }
+  padding: 10px 20px;
+  /* Añadir espaciado interno a los lados */ }
 
 h3 {
   color: #000000;
   margin: 0; }
 
 .footer-mp {
-  width: 70%; }
-  .footer-mp img {
-    width: 115px; }
+  width: 70%;
+  padding: 10px;
+  /* Añadir espaciado interno */ }
+
+.footer-mp img {
+  width: 115px;
+  margin-right: 10px;
+  /* Separación entre la imagen y el texto */ }
+
+.footer-maps iframe {
+  width: 100%;
+  /* Utilizar el ancho máximo del contenedor */
+  height: 100px;
+  /* Altura del mapa */ }
 
 .footer-redes {
-  width: 15%; }
-  .footer-redes img {
-    width: 40px; }
+  width: 15%;
+  padding: 10px;
+  /* Añadir espaciado interno */ }
+
+.footer-redes img {
+  width: 40px; }
 
 .footerContacto {
   margin-top: 100px;
