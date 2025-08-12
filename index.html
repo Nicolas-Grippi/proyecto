@@ -20,43 +20,56 @@
 
 </head>
 <body>
-    <header class="nav-wraper">
-        <nav>
-            <img class="logo-nav" src="./assets/img/Logo.png" alt="">
-            <input type="checkbox" name="" id="toggle">
-                <label for="toggle"><i class="material-icons">menu</i></label>
-            <div class="menu">
-                <ul class="paginas">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="./pages/los_mas_vendidos.html">Los más vendidos</a></li>
-                    <li><a href="./pages/quienes_somos.html">Quiénes somos</a></li>
-                    <li><a href="./pages/servicios.html">Servicios</a></li>
-                    <li><a href="./pages/contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div class="header-back">
-            <h1>Taller valhalla </h1>
-        </div>
-    </main>
-<footer class="footer">
-    <div class="footer-mp">
-        <h3>medios de pago:</h3>
-        <div>
-            <a href=""><img src="./assets/img/visa master.png" alt=""></a>
-        </div>
-    </div>
-  
-    <div class="footer-redes">
-        <h3>Seguinos en nuestras redes:</h3>
-        <a href="https://www.instagram.com/nicogrippi/" target="_blank"><img src="./assets/img/Instagram.png" alt=""></a>
-        <a href="https://wa.me/+5492616634475" target="_blank"><img src="./assets/img/WhatsApp.png" alt=""></a>
-        <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><img src="./assets/img/Facebook.png" alt=""></a>
-    </div>
-    
-</footer>
-</body>
+  <header>
+    <nav>
+      <h1>Nicolás Grippi</h1>
+      <ul>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <section class="hero">
+    <h2>Frontend Developer Junior</h2>
+    <p>Construyendo interfaces modernas con HTML, CSS, JavaScript y React.</p>
+    <a href="#projects" class="btn">Ver proyectos</a>
+  </section>
+
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <p>Soy un desarrollador frontend junior formado en Coderhouse con experiencia en proyectos de React, JavaScript y WordPress. Busco mi primera oportunidad remota para aportar valor y seguir aprendiendo.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Proyectos</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="assets/img1.png" alt="Ecommerce Escaloneta">
+        <h3>Ecommerce Escaloneta</h3>
+        <p>React + Firebase | Tienda online</p>
+        <a href="https://nicolas-grippi.github.io/React" target="_blank">Ver demo</a>
+        <a href="https://github.com/Nicolas-Grippi/React" target="_blank">Ver código</a>
+      </div>
+      <div class="project-card">
+        <img src="assets/img2.png" alt="Proyecto JavaScript">
+        <h3>Proyecto JavaScript</h3>
+        <p>HTML + CSS + JS | Funcionalidad interactiva</p>
+        <a href="https://nicolas-grippi.github.io/javaScript" target="_blank">Ver demo</a>
+        <a href="https://github.com/Nicolas-Grippi/javaScript" target="_blank">Ver código</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contacto</h2>
+    <p>Puedes escribirme a: <a href="mailto:tuemail@example.com">tuemail@example.com</a></p>
+    <p>O encontrarme en <a href="https://www.linkedin.com/in/tu-perfil" target="_blank">LinkedIn</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Nicolás Grippi. Todos los derechos reservados.</p>
+  </footer>
+</body>
 </html>
