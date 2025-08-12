@@ -1,0 +1,33 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.custom-navbar {
+  background-color: #0a74da;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #0a74da 0%, #59a8ff 100%);
+  height: 60vh;
+  min-height: 300px;
+  color: white;
+}
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(10, 116, 218, 0.3);
+}
+
+.btn-primary {
+  background-color: #0a74da;
+  border-color: #0a74da;
+}
+
+.btn-primary:hover {
+  background-color: #095abb;
+  border-color: #095abb;
+}
