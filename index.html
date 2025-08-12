@@ -1,75 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Compra hoy en Valhalla: todo para construcción, remodelación
-    y equipamiento del hogar. Compra online, envíos nacionales.">
-    <meta name="keywords" content="taller de carpinteria,muebles modernos,muebles nordicos,muebles vikingos">
-    <meta name="author" content="Nicolas Grippi">
-    <meta name="copyright" content="Taller valhalla">
-    <meta name="robots" content="index,follow">
-    <meta property="og:title" content="Taller valhalla">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nicolás Grippi – Frontend Developer</title>
 
-    <title>Taller_valhalla</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="./css/style.css"">
-    <link rel="shortcut icon" href="./assets/img/Logo.ico" type="image/x-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
+  <!-- Custom CSS -->
+  <link href="css/custom.css" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Nicolás Grippi</h1>
-      <ul>
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
+
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Nicolás Grippi</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fw-semibold">
+          <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-section text-center text-white d-flex flex-column justify-content-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-3">Hola, soy Nicolás Grippi</h1>
+      <p class="lead mb-4">Frontend Developer Junior | React | JavaScript | HTML & CSS</p>
+      <a href="#projects" class="btn btn-light btn-lg fw-semibold">Ver mis proyectos</a>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>Frontend Developer Junior</h2>
-    <p>Construyendo interfaces modernas con HTML, CSS, JavaScript y React.</p>
-    <a href="#projects" class="btn">Ver proyectos</a>
+  <section id="about" class="container my-5">
+    <h2 class="mb-4 text-center">Sobre mí</h2>
+    <p class="fs-5 text-center mx-auto" style="max-width: 700px;">
+      Soy desarrollador frontend junior formado en Coderhouse, con conocimientos en React, JavaScript, WordPress y QA manual.  
+      Apasionado por crear interfaces intuitivas y modernas, busco mi primera oportunidad laboral remota para seguir creciendo profesionalmente.
+    </p>
   </section>
 
-  <section id="about">
-    <h2>Sobre mí</h2>
-    <p>Soy un desarrollador frontend junior formado en Coderhouse con experiencia en proyectos de React, JavaScript y WordPress. Busco mi primera oportunidad remota para aportar valor y seguir aprendiendo.</p>
-  </section>
+  <section id="projects" class="container my-5">
+    <h2 class="mb-4 text-center">Proyectos</h2>
+    <div class="row g-4 justify-content-center">
 
-  <section id="projects">
-    <h2>Proyectos</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="assets/img1.png" alt="Ecommerce Escaloneta">
-        <h3>Ecommerce Escaloneta</h3>
-        <p>React + Firebase | Tienda online</p>
-        <a href="https://nicolas-grippi.github.io/React" target="_blank">Ver demo</a>
-        <a href="https://github.com/Nicolas-Grippi/React" target="_blank">Ver código</a>
+      <div class="col-md-4">
+        <div class="card shadow-sm project-card h-100">
+          <img src="assets/ecommerce-escaloneta.png" class="card-img-top" alt="Ecommerce Escaloneta" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Ecommerce Escaloneta</h5>
+            <p class="card-text">React + Firebase | Tienda online</p>
+            <div class="mt-auto">
+              <a href="https://nicolas-grippi.github.io/React" target="_blank" class="btn btn-primary btn-sm me-2">Ver demo</a>
+              <a href="https://github.com/Nicolas-Grippi/React" target="_blank" class="btn btn-outline-primary btn-sm">Ver código</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="project-card">
-        <img src="assets/img2.png" alt="Proyecto JavaScript">
-        <h3>Proyecto JavaScript</h3>
-        <p>HTML + CSS + JS | Funcionalidad interactiva</p>
-        <a href="https://nicolas-grippi.github.io/javaScript" target="_blank">Ver demo</a>
-        <a href="https://github.com/Nicolas-Grippi/javaScript" target="_blank">Ver código</a>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm project-card h-100">
+          <img src="assets/proyecto-js.png" class="card-img-top" alt="Proyecto JavaScript" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Proyecto JavaScript</h5>
+            <p class="card-text">HTML, CSS y JavaScript | Interactividad</p>
+            <div class="mt-auto">
+              <a href="https://nicolas-grippi.github.io/javaScript" target="_blank" class="btn btn-primary btn-sm me-2">Ver demo</a>
+              <a href="https://github.com/Nicolas-Grippi/javaScript" target="_blank" class="btn btn-outline-primary btn-sm">Ver código</a>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm project-card h-100">
+          <img src="assets/proyecto-landing.png" class="card-img-top" alt="Proyecto Portfolio" />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Proyecto Portfolio</h5>
+            <p class="card-text">HTML y Bootstrap | Portfolio personal</p>
+            <div class="mt-auto">
+              <a href="https://nicolas-grippi.github.io/proyecto" target="_blank" class="btn btn-primary btn-sm me-2">Ver demo</a>
+              <a href="https://github.com/Nicolas-Grippi/proyecto" target="_blank" class="btn btn-outline-primary btn-sm">Ver código</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contacto</h2>
-    <p>Puedes escribirme a: <a href="mailto:tuemail@example.com">tuemail@example.com</a></p>
-    <p>O encontrarme en <a href="https://www.linkedin.com/in/tu-perfil" target="_blank">LinkedIn</a></p>
+  <section id="contact" class="container my-5 text-center">
+    <h2 class="mb-4">Contacto</h2>
+    <p class="fs-5">
+      📧 Podés escribirme a:  
+      <a href="mailto:tuemail@example.com">tuemail@example.com</a>
+    </p>
+    <p>
+      O visitá mi perfil en  
+      <a href="https://www.linkedin.com/in/tu-perfil" target="_blank">LinkedIn</a>
+    </p>
   </section>
 
-  <footer>
-    <p>© 2025 Nicolás Grippi. Todos los derechos reservados.</p>
+  <footer class="bg-primary text-white text-center py-3">
+    <small>© 2025 Nicolás Grippi. Todos los derechos reservados.</small>
   </footer>
+
+  <!-- Bootstrap JS (Popper + Bootstrap) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
