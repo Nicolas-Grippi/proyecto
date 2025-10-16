@@ -11,13 +11,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #8D6E63;
+ 
   color: #050505; }
 
 .nav-wraper nav {
   display: flex;
   align-items: center;
-  background-color: #8D6E63; }
+  }
 
 .nav-wraper nav label {
   padding-right: 20px; }
@@ -26,18 +26,35 @@
   width: 100px;
   padding: 8px; }
 
+.header-back > :not(header):not(footer) {
+    /* Selecciona todos los hijos directos que NO son header ni footer (este sería tu div de contenido central) */
+    flex-grow: 1; /* Permite que este elemento crezca y ocupe todo el espacio disponible */
+}
+
 .header-back {
+  display: flex; /* Habilita Flexbox */
+    flex-direction: column; /* Coloca los elementos verticalmente (header, contenido, footer) */
+    min-height: 100vh;
+
+
+  /* Your existing background styles */
   background-image: url("../assets/img/Persona.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 671px;
-  padding-left: 45%;
-  padding-top: 3%; }
-  .header-back h1 {
-    font-size: 40px;
-    color: #050505;
-    text-shadow: -5px 0px 7px #ff7b00; }
+
+ 
+  box-sizing: border-box;
+}
+
+/* Your existing h1 styles */
+.header-back h1 {
+  text-align: center;
+  font-size: 40px;
+  color: #050505;
+  text-shadow: -5px 0px 7px #ff7b00;
+}
+
 
 .animacion {
   font-size: 30px;
@@ -238,7 +255,7 @@ input[type="submit"]:hover {
   background-color: #45a049; }
 
 .footer {
-  background-color: #8D6E63;
+
   width: 100%;
   height: 120px;
   display: flex;
@@ -324,8 +341,7 @@ body {
     background-color: #8D6E63;
     width: 100%;
     margin: 0; }
-  .header-back {
-    height: 584px; }
+ 
   nav {
     display: flex;
     flex-wrap: wrap;
@@ -467,15 +483,7 @@ body {
     background-color: #8D6E63;
     width: 100%;
     margin: 0; }
-  .header-back {
-    width: 1000px;
-    height: 850px;
-    padding-left: 45%;
-    padding-top: 3%; }
-    .header-back h1 {
-      font-size: 40px;
-      color: #050505;
-      text-shadow: -5px 0px 7px #ff7b00; }
+  
   nav {
     display: flex;
     flex-wrap: wrap;
@@ -615,16 +623,7 @@ body {
     background-color: #8D6E63;
     width: 100%;
     margin: 0; }
-  .header-back {
-    width: 100%;
-    height: 800px;
-    padding-left: 45%;
-    padding-top: 3%; }
-    .header-back h1 {
-      margin-right: 30px;
-      font-size: 36px;
-      color: #050505;
-      text-shadow: -5px 0px 7px #ff7b00; }
+  
   nav {
     flex-wrap: wrap;
     align-items: center;
@@ -772,15 +771,7 @@ body {
     background-color: #6C3428;
     width: 100%;
     margin: 0; }
-  .header-back {
-    width: 100%;
-    height: 500px;
-    padding-left: 45%;
-    padding-top: 3%; }
-    .header-back h1 {
-      font-size: 28px;
-      color: #050505;
-      text-shadow: -5px 0px 7px #ff7b00; }
+ 
   nav {
     flex-wrap: wrap;
     align-items: center;
