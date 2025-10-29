@@ -1,66 +1,116 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+/* --- ESTILOS BASE (MOBILE FIRST) --- */
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
-
-.nav-wraper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
- 
-  color: #050505; }
-
-.nav-wraper nav {
-  display: flex;
-  align-items: center;
-  }
-
-.nav-wraper nav label {
-  padding-right: 20px; }
-
-.nav-wraper nav .logo-nav {
-  width: 100px;
-  padding: 8px; }
-
-.header-back > :not(header):not(footer) {
-    /* Selecciona todos los hijos directos que NO son header ni footer (este sería tu div de contenido central) */
-    flex-grow: 1; /* Permite que este elemento crezca y ocupe todo el espacio disponible */
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #8D6E63;
+}
+
+/* 1. Navegación (Ajustada para móvil) */
+.nav-wraper {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px; 
+  color: #050505;
+}
+
+.nav-wraper nav {
+  display: flex; 
+  align-items: center;
+  width: 100%; 
+  justify-content: space-between; 
+}
+
+.nav-wraper nav .logo-nav {
+  width: 80px; 
+  padding: 5px;
+}
+
+.nav-wraper nav label {
+  display: block; /* Mostrar la etiqueta/botón de menú en móvil */
+  padding-right: 0; /* Aseguramos que no haya padding extra */
+  cursor: pointer;
+}
+
+/* Ocultar la lista de enlaces por defecto */
+.menu {
+  display: none; 
+  width: 100%;
+}
+
+/* Lógica del menú hamburguesa: Muestra el menú cuando el checkbox está activado */
+nav #toggle:checked ~ .menu {
+  display: block; 
+}
+
+/* Estilos de la lista de enlaces en móvil */
+.menu ul {
+  display: flex;
+  flex-direction: column; 
+  list-style: none;
+  width: 100%;
+  padding: 10px 0;
+  gap: 0;
+}
+
+.menu ul li a {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 18px; 
+  text-decoration: none;
+  color: black;
+}
+
+.menu ul li a:hover {
+  color: #ff7b00;
+}
+
+nav #toggle {
+  display: none;
+}
+
+
+/* 2. Header y Fondo */
 .header-back {
-  display: flex; /* Habilita Flexbox */
-    flex-direction: column; /* Coloca los elementos verticalmente (header, contenido, footer) */
-    min-height: 100vh;
-
-
-  /* Your existing background styles */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-image: url("../assets/img/Persona.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
- 
   box-sizing: border-box;
 }
 
-/* Your existing h1 styles */
+.header-back > :not(header):not(footer) {
+  flex-grow: 1;
+}
+
 .header-back h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 2em; 
   color: #050505;
   text-shadow: -5px 0px 7px #ff7b00;
 }
 
-
 .animacion {
-  font-size: 30px;
+  font-size: 1.5em; 
   text-align: center;
   -webkit-animation: text-pop-up-right 500ms ease-in 1s 3 both;
-  animation: text-pop-up-right 500ms ease-in 1s 3 both; }
+  animation: text-pop-up-right 500ms ease-in 1s 3 both;
+}
 
 @-webkit-keyframes text-pop-up-right {
   0% {
@@ -70,8 +120,8 @@
     transform-origin: 50% 50%;
     text-shadow: none; }
   100% {
-    -webkit-transform: translateX(50px);
-    transform: translateX(50px);
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3); } }
@@ -90,249 +140,345 @@
     transform-origin: 50% 50%;
     text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3); } }
 
+/* 3. Contenedor Grid (Productos) - Ajustado a 1 columna para móvil */
 .contenedorPadre {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /* Divide el contenedor en 4 columnas iguales */
-  justify-content: space-around;
-  margin-top: 50px;
-  gap: 20px; }
+  grid-template-columns: 1fr; 
+  gap: 30px; 
+  padding: 20px;
+  margin-top: 30px;
+}
 
-.contenedorPlacard,
-.contenedorMesa,
-.contenedorDeposito,
-.contenedorCajonera,
-.contenedorDesayunador,
-.contenedorEscritorio,
-.contenedorEstanteria,
-.contenedorCocina {
-  text-align: center; }
+.contenedorPlacard, .contenedorMesa, .contenedorDeposito, .contenedorCajonera, 
+.contenedorDesayunador, .contenedorEscritorio, .contenedorEstanteria, .contenedorCocina {
+  text-align: center;
+}
 
-.contenedorPlacard img,
-.contenedorMesa img,
-.contenedorDeposito img,
-.contenedorCajonera img,
-.contenedorDesayunador img,
-.contenedorEscritorio img,
-.contenedorEstanteria img,
-.contenedorCocina img {
-  width: 300px; }
+.contenedorPadre img {
+    max-width: 100%;
+    height: auto;
+    width: 100%; 
+}
 
 .contenedorPadre div img {
   transition: transform 0.3s ease-in-out;
-  /* Transición suave durante 0.3 segundos */ }
+}
 
 .contenedorPadre div img:hover {
-  transform: scale(1.1); }
+  transform: scale(1.05); 
+}
 
-.contenedorPlacard h2,
-.contenedorMesa h2,
-.contenedorDeposito h2,
-.contenedorCajonera h2,
-.contenedorDesayunador h2,
-.contenedorEscritorio h2,
-.contenedorEstanteria h2,
-.contenedorCocina h2 {
-  margin-top: 20px;
-  font-size: 18px; }
+.contenedorPlacard h2, .contenedorMesa h2, .contenedorDeposito h2, .contenedorCajonera h2, 
+.contenedorDesayunador h2, .contenedorEscritorio h2, .contenedorEstanteria h2, .contenedorCocina h2 {
+  margin-top: 15px;
+  font-size: 1.2em;
+}
 
-.contenedorPlacard p,
-.contenedorMesa p,
-.contenedorDeposito p,
-.contenedorCajonera p,
-.contenedorDesayunador p,
-.contenedorEscritorio p,
-.contenedorEstanteria p,
-.contenedorCocina p {
-  margin-top: 20px;
-  font-size: 16px;
-  margin-bottom: 20px; }
+.contenedorPlacard p, .contenedorMesa p, .contenedorDeposito p, .contenedorCajonera p, 
+.contenedorDesayunador p, .contenedorEscritorio p, .contenedorEstanteria p, .contenedorCocina p {
+  margin-top: 15px;
+  font-size: 1em;
+  margin-bottom: 15px;
+}
 
+
+/* 4. Contenedor Uno y Cajas (Servicios) */
 .contenedorUno {
-  width: 80%;
-  margin: 50px;
-  margin-left: 70px;
-  font-size: 20px;
-  padding-left: 120px; }
-  .contenedorUno p {
-    margin-top: 20px;
-    font-size: 20px; }
+  width: 90%; 
+  margin: 30px auto; 
+  padding: 0 10px; 
+  font-size: 1em;
+}
+
+.contenedorUno p {
+  margin-top: 15px;
+  font-size: 1em;
+}
 
 .cajas {
   display: flex;
+  flex-direction: column; 
   justify-content: space-around;
   align-items: center;
-  flex-direction: row;
-  gap: 25px;
-  margin-right: 100px;
-  margin-top: 100px;
-  padding: 20px; }
+  gap: 15px;
+  margin: 30px 0;
+  padding: 10px;
+}
 
-.cajaUno,
-.cajaDos,
-.cajaTres {
+.cajaUno, .cajaDos, .cajaTres {
+  width: 90%; 
+  margin: 0 auto; 
+  height: auto; /* Altura flexible */
+}
+
+.cajaUno h2, .cajaDos h2, .cajaTres h2 {
   width: 100%;
-  height: 50px; }
-
-.cajaUno h2,
-.cajaDos h2,
-.cajaTres h2 {
-  width: 90%;
-  height: 50px;
+  height: auto; 
   background-color: #DFA878;
   text-align: center;
-  font-size: 20px; }
+  padding: 10px; 
+  font-size: 1.2em;
+}
 
-.cajaUno p,
-.cajaDos p,
-.cajaTres p {
-  width: 90%;
-  height: 100px;
-  font-size: 20px;
+.cajaUno p, .cajaDos p, .cajaTres p {
+  width: 100%;
+  height: auto;
+  font-size: 1em;
   background-color: #BA704F;
-  text-align: center; }
+  text-align: center;
+  padding: 10px;
+}
 
 .cajaServ {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-  padding: 20px;
+  grid-template-columns: 1fr; /* 1 columna en móvil */
+  grid-gap: 15px;
+  padding: 15px;
   width: 100%;
-  font-size: 18px;
+  font-size: 1em;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 .grid-caja {
   border: 1px solid #ccc;
-  padding: 20px; }
+  padding: 20px;
+}
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+}
 
+/* 5. Contacto */
 .mainContacto {
-  width: 100%; }
+  width: 100%; 
+}
 
 .Escribenos {
   width: 100%;
   text-align: center;
   gap: 20px;
   padding: 10px;
-  padding-left: 100px;
-  font-size: 24px; }
+  font-size: 1.5em;
+}
 
 .tabla {
-  width: 80%;
+  width: 90%;
   justify-content: space-between;
-  padding: 20px;
-  padding-left: 150px;
-  font-size: 16px; }
+  padding: 10px;
+  margin: 0 auto;
+  font-size: 1em;
+}
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
+input[type="text"], input[type="email"], input[type="tel"], textarea {
   width: 100%;
   margin-bottom: 10px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 3px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 label {
   display: block;
   margin-bottom: 5px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 input[type="submit"] {
   background-color: #050505;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 3px;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 100%; /* Ancho completo */
+}
 
 input[type="submit"]:hover {
-  background-color: #45a049; }
+  background-color: #45a049;
+}
 
+/* 6. Footer (Global) */
 .footer {
-
   width: 100%;
-  height: 120px;
+  height: auto; 
   display: flex;
+  flex-direction: column; /* Apilar elementos en móvil */
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  /* Añadir espaciado interno a los lados */ }
+  padding: 15px 10px;
+}
 
 h3 {
   color: #000000;
-  margin: 0; }
+  margin: 0;
+}
 
-.footer-mp {
-  width: 70%;
-  padding: 10px;
-  /* Añadir espaciado interno */ }
+.footer-mp, .footer-redes {
+  width: 100%; 
+  padding: 10px 0;
+  text-align: center;
+}
 
 .footer-mp img {
-  width: 115px;
-  margin-right: 10px;
-  /* Separación entre la imagen y el texto */ }
+  width: 100px;
+  margin: 5px; 
+}
 
 .footer-maps iframe {
-  width: 100%;
-  /* Utilizar el ancho máximo del contenedor */
-  height: 100px;
-  /* Altura del mapa */ }
-
-.footer-redes {
-  width: 15%;
-  padding: 10px;
-  /* Añadir espaciado interno */ }
+  width: 100%; 
+  height: 100px; 
+}
 
 .footer-redes img {
-  width: 40px; }
+  width: 35px;
+  margin: 5px;
+}
 
-.footerContacto {
-  margin-top: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px; }
+/* Ajustes de margen específicos de otras páginas (mantener mobile first) */
+.footerContacto, .footerQuienesSomos, .footerVendidos {
+  flex-direction: column; 
+  padding: 15px 10px;
+  margin-top: 50px; 
+}
 
-.footerQuienesSomos {
-  margin-top: 200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px; }
 
-.footerVendidos {
-  margin-top: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 20px; }
+/* --- MEDIA QUERIES (Para tablets y escritorio) --- */
 
-.menu ul {
-  display: flex;
-  list-style: none;
-  gap: 12px; }
+/* 1. Pantallas medianas (ej. Tablets, > 600px) */
+@media screen and (min-width: 600px) {
 
-.menu ul li a {
-  color: black;
-  margin-right: 50px;
-  font-size: 24px;
-  text-decoration: none; }
+    /* Navegación - Restablecer la vista de escritorio */
+    .nav-wraper nav {
+        justify-content: space-between; 
+    }
+    
+    nav label, nav #toggle {
+        display: none; /* Ocultar el botón y el checkbox */
+    }
+    
+    .menu {
+        display: block; /* Mostrar el menú en escritorio */
+    }
 
-.menu ul li a:hover {
-  color: #ff7b00;
-  text-decoration: none; }
+    .menu ul {
+        flex-direction: row; /* En fila */
+        gap: 12px;
+        padding-left: 0;
+        width: auto;
+    }
+    .menu ul li a {
+        font-size: 20px;
+        padding: 0;
+    }
 
-nav #toggle,
-nav label {
-  display: none; }
+    /* Contenedor Grid (Productos) */
+    .contenedorPadre {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        padding: 30px;
+    }
 
-body {
-  font-family: "Lato", sans-serif;
-  background-color: #8D6E63; }
+    /* Contenedor Uno */
+    .contenedorUno {
+        padding: 0 40px; 
+    }
 
+    /* Cajas (Servicios) */
+    .cajas {
+        flex-direction: row; /* Volver a filas */
+        margin: 50px auto;
+        padding: 20px;
+    }
+    .cajaUno, .cajaDos, .cajaTres {
+        width: calc(33.33% - 20px); /* 3 columnas */
+        height: 150px;
+    }
+    
+    .cajaServ {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-gap: 20px;
+    }
+
+    /* Contacto */
+    .tabla {
+        width: 70%;
+        padding: 20px;
+    }
+    input[type="submit"] {
+        width: auto;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: row; /* Volver a filas */
+        height: 120px;
+    }
+    .footer-mp {
+        width: 50%;
+        text-align: left;
+    }
+    .footer-redes {
+        width: 30%;
+    }
+    .footer-maps iframe {
+        height: 100px;
+    }
+}
+
+/* 2. Pantallas grandes (ej. Desktop, > 1024px) */
+@media screen and (min-width: 1024px) {
+    
+    /* Navegación */
+    .nav-wraper {
+        padding: 10px 50px;
+    }
+    .nav-wraper nav .logo-nav {
+        width: 100px;
+    }
+    .menu ul li a {
+        font-size: 24px;
+        margin-right: 50px;
+    }
+
+    /* Contenedor Grid (Productos) */
+    .contenedorPadre {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas originales */
+        gap: 20px;
+        padding: 50px;
+    }
+
+    /* Contenedor Uno y Cajas (Servicios) - Volver a estilos originales pero flexibles */
+    .contenedorUno {
+        width: 80%;
+        margin: 50px auto;
+        padding-left: 120px; /* Restaurar tu padding original */
+        font-size: 20px;
+    }
+    
+    .cajas {
+        gap: 25px;
+        margin-right: 100px;
+        margin-top: 100px;
+    }
+    .cajaUno, .cajaDos, .cajaTres {
+        width: auto; 
+    }
+
+    /* Contacto */
+    .tabla {
+        width: 80%;
+        padding-left: 150px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 10px 20px;
+    }
+    .footer-mp {
+        width: 70%;
+    }
+    .footer-redes {
+        width: 15%;
+    }
+}
