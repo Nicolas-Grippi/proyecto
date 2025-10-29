@@ -38,35 +38,68 @@
     <p>Para que puedas tener informacion sobre cualquiera de nuestros productos o bien si tenes alguna duda y/o comentario, no dudes en dejarnos tu mensaje.
     Tendremos mucho gusto en atenderte</p>
 </div>
-    <main class="mainContacto">  
-        <form class="tabla" action="">
-            <fieldset>
-                <legend>Nombre</legend>
-                <label for="Nombre"></label>
-                <input type="text" id="Nombre">
-            </fieldset>
-            <fieldset>
-                <legend>Email</legend>
-                <label for="email"></label>
-                <input type="email" id="email" autocomplete="off">
-            </fieldset>
-            <fieldset>
-                <legend>Telefono</legend>
-                <label for="Telefono"></label>
-                <input type="tel" id="Telefono">
-            </fieldset>
-            <fieldset>
-                <legend>Celular</legend>
-                <label for="Celular"></label>
-                <input type="tel" id="Celular">
-            </fieldset>
-            <fieldset>
-                <legend>Mensaje</legend>
-                <label for="Mensaje"></label>
-                <input type="text" id="Mensaje">
-            </fieldset>
-            <input type="submit">
-    </main>
+
+<main class="mainContacto">
+    <form class="tabla" action="">
+        <fieldset>
+            
+            <label for="Nombre">Nombre completo</label>
+            <input 
+                type="text" 
+                id="Nombre" 
+                name="nombre" 
+                required 
+                pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" 
+                title="Solo se permiten letras y espacios."
+            >
+        </fieldset>
+        <fieldset>
+            
+            <label for="email">Correo electrónico</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                autocomplete="off"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}(\.[a-z]{2})?$"
+                title="Debe ser un formato de correo válido (ej: usuario@dominio.com o usuario@dominio.com.ar)"
+            >
+        </fieldset>
+        <fieldset>
+            
+            <label for="Telefono">Número de teléfono</label>
+            <input 
+                type="tel" 
+                id="Telefono" 
+                name="telefono"
+                required
+                pattern="[0-9]{7,15}" 
+                title="Solo se permiten números (sin espacios ni guiones)."
+            >
+        </fieldset>
+        <fieldset>
+            
+            <label for="Celular">Número de celular</label>
+            <input 
+                type="tel" 
+                id="Celular" 
+                name="celular"
+                required
+                pattern="[0-9]{7,15}" 
+                title="Solo se permiten números (sin espacios ni guiones)."
+            >
+        </fieldset>
+        <fieldset>
+            <legend>Mensaje</legend>
+            <label for="Mensaje">Escribe tu mensaje</label>
+            <textarea id="Mensaje" name="mensaje" required></textarea>
+        </fieldset>
+        <input type="submit" value="Enviar Formulario">
+    </form>
+</main>
+
+
     <footer class="footerContacto">
         <div class="footer-mp">
             <h3>medios de pago:</h3>
