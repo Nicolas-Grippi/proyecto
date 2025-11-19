@@ -20,11 +20,12 @@
 
 <body>
     <header class="nav-wraper">
+      
         <nav>
          <a href="../index.html">
         <img class="logo-nav" src="../assets/img/Logo.png" alt="Ir a la página de inicio">
     </a>
-           
+         
             <input type="checkbox" name="" id="toggle">
                 <label for="toggle"><i class="material-icons">menu</i></label>
             <div class="menu">
@@ -34,6 +35,9 @@
                     <li><a href="../pages/quienes_somos.html">Quiénes somos</a></li>
                     <li><a href="../pages/servicios.html">Servicios</a></li>
                     <li><a href="../pages/contacto.html">Contacto</a></li>
+                       <a href="./carrito.html" id="ver-carrito">
+    🛒 Ver Carrito (<span id="contador-carrito">0</span>)
+</a>
                 </ul>
             </div>
         </nav>
@@ -42,64 +46,77 @@
         <div class="animacion">
             <p>SUPER OFERTAS!!!!</p>
         </div>
+        
         <div class="contenedorPadre">
-        <div class="contenedorPlacard"> 
-            <img src="../assets/img/placard.jpg" alt="Placard Nordico">
-            <h2>Placard Nordico</h2>
-            <p>Medidas: Alto 2 mts , Ancho 1.2 mts, Profundidad 60cm.</p>
-            <p>Precio: $120.000</p>
-            <button>Comprar</button>
+            
+            <div class="contenedorPlacard producto" data-nombre="Placard Nordico" data-precio="120000"> 
+                <img src="../assets/img/placard.jpg" alt="Placard Nordico">
+                <h2>Placard Nordico</h2>
+                <p>Medidas: Alto 2 mts , Ancho 1.2 mts, Profundidad 60cm.</p>
+                <p>Precio: $120.000</p>
+                <button class="boton-comprar" data-id="1">Comprar</button>
+            </div>
+            
+            <div class="contenedorMesa producto" data-nombre="Mesa y sillas Vikingas" data-precio="240000">
+                <img src="../assets/img/mesa.jpg" alt="Mesa y sillas Vikingas">
+                <h2>Mesa y sillas Vikingas</h2>
+                <p>Medidas: Alto 75cm, Largo 1.5 mts.</p>
+                <p>Precio: $240.000</p>
+                <button class="boton-comprar" data-id="2">Comprar</button>
+            </div>
+            
+            <div class="contenedorDeposito producto" data-nombre="Estructura para deposito" data-precio="565000">
+                <img src="../assets/img/deposito.jpg" alt="Estructura para deposito">
+                <h2>Estructura para deposito</h2>
+                <p>Medidas: Alto 15 mts , Ancho 10 mts, Profundidad 20mts.</p>
+                <p>Precio: $565.000</p>
+                <button class="boton-comprar" data-id="3">Comprar</button>
+            </div>
+            
+            <div class="contenedorCajonera producto" data-nombre="Cajonera" data-precio="165000">
+                <img src="../assets/img/cajonera.png" alt="Cajonera">
+                <h2>Cajonera</h2>
+                <p>Medidas: Alto 1.5 mts , Ancho 1 mts, Profundidad 5mts.</p>
+                <p>Precio: $165.000</p>
+                <button class="boton-comprar" data-id="4">Comprar</button>
+            </div>
+            
+            <div class="contenedorDesayunador producto" data-nombre="Desayunador" data-precio="253000">
+                <img src="../assets/img/desayunador.png" alt="Desayunador">
+                <h2>Desayunador</h2>
+                <p>Medidas: Alto 1.5 mts , Ancho 60cm.</p>
+                <p>Precio: $253.000</p>
+                <button class="boton-comprar" data-id="5">Comprar</button>
+            </div>
+            
+            <div class="contenedorEscritorio producto" data-nombre="Escritorio" data-precio="85000">
+                <img src="../assets/img/escritorio.png" alt="Escritorio">
+                <h2>Escritorio</h2>
+                <p>Medidas: Alto 60cm , Ancho 1 mts, Profundidad 2mts.</p>
+                <p>Precio: $85.000</p>
+                <button class="boton-comprar" data-id="6">Comprar</button>
+            </div>
+            
+            <div class="contenedorEstanteria producto" data-nombre="Estanteria" data-precio="132000">
+                <img src="../assets/img/estanteria.png" alt="Estanteria">
+                <h2>Estanteria</h2>
+                <p>Medidas: Alto 2 mts , Ancho 30cm, Profundidad 25cm.</p>
+                <p>Precio: $132.000</p>
+                <button class="boton-comprar" data-id="7">Comprar</button>
+            </div>
+            
+            <div class="contenedorCocina producto" data-nombre="Mueble de cocina" data-precio="600000">
+                <img src="../assets/img/muebleCocina.png" alt="Mueble de cocina">
+                <h2>Mueble de cocina</h2>
+                <p>Medidas: Alto 1 mts , Ancho 3mts, Profundidad 65cm.</p>
+                <p>Precio: $600.000</p>
+                <button class="boton-comprar" data-id="8">Comprar</button>
+            </div>
+            
         </div>
-        <div class="contenedorMesa">
-            <img src="../assets/img/mesa.jpg" alt="Mesa y sillas Vikingas">
-            <h2>Mesa y sillas Vikingas</h2>
-            <p>Medidas: Alto 75cm, Largo 1.5 mts.</p>
-            <p>Precio: $240.000</p>
-            <button>Comprar</button></div>
-        <div class="contenedorDeposito">
-            <img src="../assets/img/deposito.jpg" alt="Estructura para deposito">
-            <h2>Estructura para deposito</h2>
-            <p>Medidas: Alto 15 mts , Ancho 10 mts, Profundidad 20mts.</p>
-            <p>Precio: $565.000</p>
-            <button>Comprar</button>
-        </div>
-        <div class="contenedorCajonera">
-            <img src="../assets/img/cajonera.png" alt="Cajonera">
-            <h2>Cajonera</h2>
-            <p>Medidas: Alto 1.5 mts , Ancho 1 mts, Profundidad 5mts.</p>
-            <p>Precio: $165.000</p>
-            <button>Comprar</button>
-        </div>
-        <div class="contenedorDesayunador">
-            <img src="../assets/img/desayunador.png" alt="Desayunador">
-            <h2>Desayunador</h2>
-            <p>Medidas: Alto 1.5 mts , Ancho 60cm.</p>
-            <p>Precio: $253.000</p>
-            <button>Comprar</button>
-        </div>
-        <div class="contenedorEscritorio">
-            <img src="../assets/img/escritorio.png" alt="Escritorio">
-            <h2>Escritorio</h2>
-            <p>Medidas: Alto 60cm , Ancho 1 mts, Profundidad 2mts.</p>
-            <p>Precio: $85.000</p>
-            <button>Comprar</button>
-        </div>
-        <div class="contenedorEstanteria">
-            <img src="../assets/img/estanteria.png" alt="Estanteria">
-            <h2>Estanteria</h2>
-            <p>Medidas: Alto 2 mts , Ancho 30cm, Profundidad 25cm.</p>
-            <p>Precio: $132.000</p>
-            <button>Comprar</button>
-        </div>
-        <div class="contenedorCocina">
-            <img src="../assets/img/muebleCocina.png" alt="Mueble de cocina">
-            <h2>Mueble de cocina</h2>
-            <p>Medidas: Alto 1 mts , Ancho 3mts, Profundidad 65cm.</p>
-            <p>Precio: $600.000</p>
-            <button>Comprar</button>
-        </div>
-    </div>
-    </main>
+    </main> 
+    <script src="../js/productos.js"></script>
+    
     <footer class="footerVendidos">
         <div class="footer-mp">
             <h3>medios de pago:</h3>
