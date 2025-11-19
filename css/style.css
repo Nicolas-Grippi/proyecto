@@ -5,153 +5,188 @@
 /* --- ESTILOS BASE (MOBILE FIRST) --- */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Lato", sans-serif;
-  background-color: #8D6E63;
+    font-family: "Lato", sans-serif;
+    background-color: #8D6E63; /* Tu color de fondo base */
 }
 
 /* 1. Navegación (Ajustada para móvil) */
 .nav-wraper {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 15px; 
-  color: #050505;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px; 
+    color: #050505;
 }
 
 .nav-wraper nav {
-  display: flex; 
-  align-items: center;
-  width: 100%; 
-  justify-content: space-between; 
+    display: flex; 
+    align-items: center;
+    width: 100%; 
+    justify-content: space-between; 
 }
 
 .nav-wraper nav .logo-nav {
-  width: 80px; 
-  padding: 5px;
+    width: 80px; 
+    padding: 5px;
 }
 
 .nav-wraper nav label {
-  display: block; /* Mostrar la etiqueta/botón de menú en móvil */
-  padding-right: 0; /* Aseguramos que no haya padding extra */
-  cursor: pointer;
+    display: block;
+    padding-right: 0;
+    cursor: pointer;
 }
 
 /* Ocultar la lista de enlaces por defecto */
 .menu {
-  display: none; 
-  width: 100%;
+    display: none; 
+    width: 100%;
 }
 
 /* Lógica del menú hamburguesa: Muestra el menú cuando el checkbox está activado */
 nav #toggle:checked ~ .menu {
-  display: block; 
+    display: block; 
 }
 
 /* Estilos de la lista de enlaces en móvil */
 .menu ul {
-  display: flex;
-  flex-direction: column; 
-  list-style: none;
-  width: 100%;
-  padding: 10px 0;
-  gap: 0;
+    display: flex;
+    flex-direction: column; 
+    list-style: none;
+    width: 100%;
+    padding: 10px 0;
+    gap: 0;
 }
 
 .menu ul li a {
-  display: block;
-  padding: 10px 0;
-  text-align: center;
-  font-size: 18px; 
-  text-decoration: none;
-  color: black;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px; 
+    text-decoration: none;
+    color: black;
 }
 
 .menu ul li a:hover {
-  color: #ff7b00;
+    color: #ff7b00; /* Tu color de acento */
 }
 
 nav #toggle {
-  display: none;
+    display: none;
+}
+
+/* --- ESTILOS AÑADIDOS PARA EL ENLACE DEL CARRITO EN EL HEADER --- */
+
+#ver-carrito {
+    text-decoration: none;
+    color: #8D6E63; /* Color de texto que contrasta */
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #BA704F;
+    border-radius: 5px;
+    background-color: white; 
+    transition: background-color 0.3s;
+    margin-left: 15px;
+}
+
+#ver-carrito:hover {
+    background-color: #BA704F;
+    color: white;
+}
+
+#contador-carrito {
+    background-color: #ff7b00; /* Color de acento */
+    color: white;
+    padding: 2px 6px;
+    border-radius: 50%;
+    margin-left: 5px;
+    font-size: 0.8em;
 }
 
 
 /* 2. Header y Fondo */
 .header-back {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-image: url("../assets/img/Persona.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("../assets/img/Persona.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 
 .header-back > :not(header):not(footer) {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 .header-back h1 {
-  text-align: center;
-  font-size: 2em; 
-  color: #050505;
-  text-shadow: -5px 0px 7px #ff7b00;
+    text-align: center;
+    font-size: 2em; 
+    color: #050505;
+    text-shadow: -5px 0px 7px #ff7b00;
 }
 
 .animacion {
-  font-size: 1.5em; 
-  text-align: center;
-  -webkit-animation: text-pop-up-right 500ms ease-in 1s 3 both;
-  animation: text-pop-up-right 500ms ease-in 1s 3 both;
+    font-size: 1.5em; 
+    text-align: center;
+    -webkit-animation: text-pop-up-right 500ms ease-in 1s 3 both;
+    animation: text-pop-up-right 500ms ease-in 1s 3 both;
 }
 
 @-webkit-keyframes text-pop-up-right {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    text-shadow: none; }
-  100% {
-    -webkit-transform: translateX(-10px);
-    transform: translateX(-10px);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3); } }
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        text-shadow: none; }
+    100% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3); } }
 
 @keyframes text-pop-up-right {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    text-shadow: none; }
-  100% {
-    -webkit-transform: translateX(-10px);
-    transform: translateX(-10px);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3); } }
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        text-shadow: none; }
+    100% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3); } }
 
 /* 3. Contenedor Grid (Productos) - Ajustado a 1 columna para móvil */
 .contenedorPadre {
-  display: grid;
-  grid-template-columns: 1fr; 
-  gap: 30px; 
-  padding: 20px;
-  margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 30px; 
+    padding: 20px;
+    margin-top: 30px;
 }
 
+/* Nota: Agrupamos las clases de producto para que el estilo de 'Comprar' sea uniforme */
 .contenedorPlacard, .contenedorMesa, .contenedorDeposito, .contenedorCajonera, 
 .contenedorDesayunador, .contenedorEscritorio, .contenedorEstanteria, .contenedorCocina {
-  text-align: center;
+    text-align: center;
+    /* Para el carrito, los divs de producto deben tener la clase 'producto' en el HTML */
+    border: 1px solid #DFA878; 
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
 }
 
 .contenedorPadre img {
@@ -161,186 +196,207 @@ nav #toggle {
 }
 
 .contenedorPadre div img {
-  transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .contenedorPadre div img:hover {
-  transform: scale(1.05); 
+    transform: scale(1.05); 
 }
 
 .contenedorPlacard h2, .contenedorMesa h2, .contenedorDeposito h2, .contenedorCajonera h2, 
 .contenedorDesayunador h2, .contenedorEscritorio h2, .contenedorEstanteria h2, .contenedorCocina h2 {
-  margin-top: 15px;
-  font-size: 1.2em;
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #8D6E63;
 }
 
 .contenedorPlacard p, .contenedorMesa p, .contenedorDeposito p, .contenedorCajonera p, 
 .contenedorDesayunador p, .contenedorEscritorio p, .contenedorEstanteria p, .contenedorCocina p {
-  margin-top: 15px;
-  font-size: 1em;
-  margin-bottom: 15px;
+    margin-top: 15px;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+/* --- ESTILO AÑADIDO PARA EL BOTÓN COMPRAR EN LOS PRODUCTOS (.boton-comprar) --- */
+
+.boton-comprar {
+    background-color: #BA704F; /* Marrón oscuro para el botón principal */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    width: 80%;
+}
+
+.boton-comprar:hover {
+    background-color: #DFA878; /* Color caja clara al pasar el ratón */
+    color: #050505;
 }
 
 
 /* 4. Contenedor Uno y Cajas (Servicios) */
 .contenedorUno {
-  width: 90%; 
-  margin: 30px auto; 
-  padding: 0 10px; 
-  font-size: 1em;
+    width: 90%; 
+    margin: 30px auto; 
+    padding: 0 10px; 
+    font-size: 1em;
 }
 
 .contenedorUno p {
-  margin-top: 15px;
-  font-size: 1em;
+    margin-top: 15px;
+    font-size: 1em;
 }
 
 .cajas {
-  display: flex;
-  flex-direction: column; 
-  justify-content: space-around;
-  align-items: center;
-  gap: 15px;
-  margin: 30px 0;
-  padding: 10px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+    margin: 30px 0;
+    padding: 10px;
 }
 
 .cajaUno, .cajaDos, .cajaTres {
-  width: 90%; 
-  margin: 0 auto; 
-  height: auto; /* Altura flexible */
+    width: 90%; 
+    margin: 0 auto; 
+    height: auto;
 }
 
 .cajaUno h2, .cajaDos h2, .cajaTres h2 {
-  width: 100%;
-  height: auto; 
-  background-color: #DFA878;
-  text-align: center;
-  padding: 10px; 
-  font-size: 1.2em;
+    width: 100%;
+    height: auto; 
+    background-color: #DFA878;
+    text-align: center;
+    padding: 10px; 
+    font-size: 1.2em;
 }
 
 .cajaUno p, .cajaDos p, .cajaTres p {
-  width: 100%;
-  height: auto;
-  font-size: 1em;
-  background-color: #BA704F;
-  text-align: center;
-  padding: 10px;
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+    background-color: #BA704F;
+    text-align: center;
+    padding: 10px;
 }
 
 .cajaServ {
-  display: grid;
-  grid-template-columns: 1fr; /* 1 columna en móvil */
-  grid-gap: 15px;
-  padding: 15px;
-  width: 100%;
-  font-size: 1em;
-  justify-content: center;
-  align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+    padding: 15px;
+    width: 100%;
+    font-size: 1em;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-caja {
-  border: 1px solid #ccc;
-  padding: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 /* 5. Contacto */
 .mainContacto {
-  width: 100%; 
+    width: 100%; 
 }
 
 .Escribenos {
-  width: 100%;
-  text-align: center;
-  gap: 20px;
-  padding: 10px;
-  font-size: 1.5em;
+    width: 100%;
+    text-align: center;
+    gap: 20px;
+    padding: 10px;
+    font-size: 1.5em;
 }
 
 .tabla {
-  width: 90%;
-  justify-content: space-between;
-  padding: 10px;
-  margin: 0 auto;
-  font-size: 1em;
+    width: 90%;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 1em;
 }
 
 input[type="text"], input[type="email"], input[type="tel"], textarea {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
 }
 
 label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 input[type="submit"] {
-  background-color: #050505;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 3px;
-  cursor: pointer;
-  width: 100%; /* Ancho completo */
+    background-color: #050505;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
 }
 
 input[type="submit"]:hover {
-  background-color: #45a049;
+    background-color: #45a049;
 }
 
 /* 6. Footer (Global) */
 .footer {
-  width: 100%;
-  height: auto; 
-  display: flex;
-  flex-direction: column; /* Apilar elementos en móvil */
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 10px;
+    width: 100%;
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
 }
 
 h3 {
-  color: #000000;
-  margin: 0;
+    color: #000000;
+    margin: 0;
 }
 
 .footer-mp, .footer-redes {
-  width: 100%; 
-  padding: 10px 0;
-  text-align: center;
+    width: 100%; 
+    padding: 10px 0;
+    text-align: center;
 }
 
 .footer-mp img {
-  width: 100px;
-  margin: 5px; 
+    width: 100px;
+    margin: 5px; 
 }
 
 .footer-maps iframe {
-  width: 100%; 
-  height: 100px; 
+    width: 100%; 
+    height: 100px; 
 }
 
 .footer-redes img {
-  width: 35px;
-  margin: 5px;
+    width: 35px;
+    margin: 5px;
 }
 
 /* Ajustes de margen específicos de otras páginas (mantener mobile first) */
 .footerContacto, .footerQuienesSomos, .footerVendidos {
-  flex-direction: column; 
-  padding: 15px 10px;
-  margin-top: 50px; 
+    flex-direction: column; 
+    padding: 15px 10px;
+    margin-top: 50px; 
 }
 
 
@@ -355,15 +411,15 @@ h3 {
     }
     
     nav label, nav #toggle {
-        display: none; /* Ocultar el botón y el checkbox */
+        display: none;
     }
     
     .menu {
-        display: block; /* Mostrar el menú en escritorio */
+        display: block;
     }
 
     .menu ul {
-        flex-direction: row; /* En fila */
+        flex-direction: row;
         gap: 12px;
         padding-left: 0;
         width: auto;
@@ -375,7 +431,7 @@ h3 {
 
     /* Contenedor Grid (Productos) */
     .contenedorPadre {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-columns: repeat(2, 1fr);
         padding: 30px;
     }
 
@@ -386,17 +442,17 @@ h3 {
 
     /* Cajas (Servicios) */
     .cajas {
-        flex-direction: row; /* Volver a filas */
+        flex-direction: row;
         margin: 50px auto;
         padding: 20px;
     }
     .cajaUno, .cajaDos, .cajaTres {
-        width: calc(33.33% - 20px); /* 3 columnas */
+        width: calc(33.33% - 20px);
         height: 150px;
     }
     
     .cajaServ {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
     }
 
@@ -411,7 +467,7 @@ h3 {
 
     /* Footer */
     .footer {
-        flex-direction: row; /* Volver a filas */
+        flex-direction: row;
         height: 120px;
     }
     .footer-mp {
@@ -443,16 +499,16 @@ h3 {
 
     /* Contenedor Grid (Productos) */
     .contenedorPadre {
-        grid-template-columns: repeat(4, 1fr); /* 4 columnas originales */
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
         padding: 50px;
     }
 
-    /* Contenedor Uno y Cajas (Servicios) - Volver a estilos originales pero flexibles */
+    /* Contenedor Uno y Cajas (Servicios) */
     .contenedorUno {
         width: 80%;
         margin: 50px auto;
-        padding-left: 120px; /* Restaurar tu padding original */
+        padding-left: 120px;
         font-size: 20px;
     }
     
@@ -480,5 +536,148 @@ h3 {
     }
     .footer-redes {
         width: 15%;
+    }
+}
+
+
+/* ======================================================================= */
+/* --- 7. ESTILOS PARA LA PÁGINA DEL CARRITO (carrito.html) --- */
+/* ======================================================================= */
+
+/* 7.1 Estilo para el contenedor principal del carrito */
+.main-carrito {
+    background-color: #f7f3f0; /* Un beige muy claro y cálido */
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 7.2 Encabezado del Carrito */
+.main-carrito h1 {
+    color: #050505;
+    font-size: 2em;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #DFA878;
+    padding-bottom: 10px;
+}
+
+/* 7.3 Lista de Productos en el Carrito */
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+}
+
+#lista-carrito li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px dashed #BA704F;
+}
+
+#lista-carrito li:last-child {
+    border-bottom: none;
+}
+
+.nombre-producto {
+    font-weight: bold;
+    color: #8D6E63;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* 7.4 Controles de Cantidad y Precio */
+/* La clase .item-actions DEBE ser añadida al DIV que envuelve la cantidad, restar y eliminar en carrito.js */
+.item-actions {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+/* Botones Restar (➖) */
+.btn-restar {
+    background-color: #DFA878;
+    color: #050505;
+    border: 1px solid #BA704F;
+    padding: 5px 10px;
+    margin: 0 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+.btn-restar:hover {
+    background-color: #BA704F;
+    color: white;
+}
+
+/* Botón Eliminar (❌) */
+.btn-eliminar {
+    background-color: #a04040;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-eliminar:hover {
+    background-color: #c95151;
+}
+
+/* 7.5 Sección de Total */
+.total-container {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 3px solid #8D6E63;
+    text-align: right;
+}
+
+.total-container h2 {
+    font-size: 1.8em;
+    color: #ff7b00;
+}
+
+/* 7.6 Botón Vaciar Carrito y Enlace Volver */
+#vaciar-carrito {
+    background-color: #050505;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.2s;
+}
+
+#vaciar-carrito:hover {
+    background-color: #BA704F;
+}
+
+.main-carrito a {
+    color: #BA704F;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+/* 7.7 Ajuste responsivo para el Carrito */
+@media screen and (min-width: 600px) {
+    .main-carrito {
+        max-width: 800px;
+    }
+    .nombre-producto {
+        width: auto;
+        margin-bottom: 0;
+    }
+    .item-actions {
+        justify-content: space-between;
+        flex-grow: 0;
     }
 }
