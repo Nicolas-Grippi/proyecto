@@ -15,7 +15,7 @@ body {
     background-color: #8D6E63; /* Tu color de fondo base */
 }
 
-/* 1. Navegación (Ajustada para móvil) */
+/* 1. Navegación (Mobile First: Hamburguesa Visible) */
 .nav-wraper {
     display: flex;
     flex-wrap: wrap; 
@@ -37,13 +37,14 @@ body {
     padding: 5px;
 }
 
+/* Hamburguesa (Label): Visible en móvil */
 .nav-wraper nav label {
     display: block;
     padding-right: 0;
     cursor: pointer;
 }
 
-/* Ocultar la lista de enlaces por defecto */
+/* Ocultar la lista de enlaces por defecto en móvil */
 .menu {
     display: none; 
     width: 100%;
@@ -54,7 +55,7 @@ nav #toggle:checked ~ .menu {
     display: block; 
 }
 
-/* Estilos de la lista de enlaces en móvil */
+/* Estilos de la lista de enlaces en móvil (vertical) */
 .menu ul {
     display: flex;
     flex-direction: column; 
@@ -85,7 +86,7 @@ nav #toggle {
 
 #ver-carrito {
     text-decoration: none;
-    color: #8D6E63; /* Color de texto que contrasta */
+    color: #8D6E63;
     font-size: 1em;
     font-weight: bold;
     padding: 5px 10px;
@@ -102,7 +103,7 @@ nav #toggle {
 }
 
 #contador-carrito {
-    background-color: #ff7b00; /* Color de acento */
+    background-color: #ff7b00;
     color: white;
     padding: 2px 6px;
     border-radius: 50%;
@@ -182,7 +183,6 @@ nav #toggle {
 .contenedorPlacard, .contenedorMesa, .contenedorDeposito, .contenedorCajonera, 
 .contenedorDesayunador, .contenedorEscritorio, .contenedorEstanteria, .contenedorCocina {
     text-align: center;
-    /* Para el carrito, los divs de producto deben tener la clase 'producto' en el HTML */
     border: 1px solid #DFA878; 
     padding: 15px;
     border-radius: 5px;
@@ -360,7 +360,7 @@ input[type="submit"]:hover {
     width: 100%;
     height: auto; 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Estilo por defecto en Mobile First */
     justify-content: space-between;
     align-items: center;
     padding: 15px 10px;
@@ -392,12 +392,6 @@ h3 {
     margin: 5px;
 }
 
-/* Ajustes de margen específicos de otras páginas (mantener mobile first) */
-.footerContacto, .footerQuienesSomos, .footerVendidos {
-    flex-direction: column; 
-    padding: 15px 10px;
-    margin-top: 50px; 
-}
 
 
 /* --- MEDIA QUERIES (Para tablets y escritorio) --- */
@@ -405,19 +399,34 @@ h3 {
 /* 1. Pantallas medianas (ej. Tablets, > 600px) */
 @media screen and (min-width: 600px) {
 
-    /* Navegación - Restablecer la vista de escritorio */
+    /* ****************************************************** */
+    /* MODIFICACIONES PARA OCULTAR LA HAMBURGUESA EN DESKTOP */
+    /* ****************************************************** */
+    .nav-wraper {
+        flex-wrap: nowrap; 
+    }
     .nav-wraper nav {
-        justify-content: space-between; 
+        width: auto; 
     }
     
-    nav label, nav #toggle {
+    .nav-wraper nav label {
+        display: none;
+    }
+    
+    nav #toggle {
         display: none;
     }
     
     .menu {
         display: block;
+        width: auto;
     }
-
+    
+    /* Navegación - Resto de tu código original */
+    .nav-wraper nav {
+        justify-content: space-between; 
+    }
+    
     .menu ul {
         flex-direction: row;
         gap: 12px;
@@ -465,7 +474,7 @@ h3 {
         width: auto;
     }
 
-    /* Footer */
+    /* Footer: Se aplica el layout horizontal (igual para todas las páginas) */
     .footer {
         flex-direction: row;
         height: 120px;
@@ -479,6 +488,19 @@ h3 {
     }
     .footer-maps iframe {
         height: 100px;
+    }
+    
+    /* 7.7 Ajuste responsivo para el Carrito */
+    .main-carrito {
+        max-width: 800px;
+    }
+    .nombre-producto {
+        width: auto;
+        margin-bottom: 0;
+    }
+    .item-actions {
+        justify-content: space-between;
+        flex-grow: 0;
     }
 }
 
@@ -543,23 +565,22 @@ h3 {
 /* ======================================================================= */
 /* --- 7. ESTILOS PARA LA PÁGINA DEL CARRITO (carrito.html) --- */
 /* ======================================================================= */
-
 /* 7.1 Estilo para el contenedor principal del carrito */
 .main-carrito {
-    background-color: #f7f3f0; /* Un beige muy claro y cálido */
+    background-color: #FBF8F4; 
     padding: 30px;
     margin: 30px auto;
     max-width: 90%;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(92, 60, 46, 0.1); 
 }
 
 /* 7.2 Encabezado del Carrito */
 .main-carrito h1 {
-    color: #050505;
-    font-size: 2em;
+    color: #5C3C2E; 
+    font-size: 2.2em;
     margin-bottom: 25px;
-    border-bottom: 2px solid #DFA878;
+    border-bottom: 2px solid #9E6C4C; 
     padding-bottom: 10px;
 }
 
@@ -575,7 +596,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
-    border-bottom: 1px dashed #BA704F;
+    border-bottom: 1px dashed #C79F70; 
 }
 
 #lista-carrito li:last-child {
@@ -584,13 +605,12 @@ h3 {
 
 .nombre-producto {
     font-weight: bold;
-    color: #8D6E63;
+    color: #9E6C4C; 
     width: 100%;
     margin-bottom: 10px;
 }
 
 /* 7.4 Controles de Cantidad y Precio */
-/* La clase .item-actions DEBE ser añadida al DIV que envuelve la cantidad, restar y eliminar en carrito.js */
 .item-actions {
     display: flex;
     align-items: center;
@@ -600,9 +620,9 @@ h3 {
 
 /* Botones Restar (➖) */
 .btn-restar {
-    background-color: #DFA878;
-    color: #050505;
-    border: 1px solid #BA704F;
+    background-color: #C79F70; 
+    color: #5C3C2E;
+    border: 1px solid #9E6C4C;
     padding: 5px 10px;
     margin: 0 8px;
     border-radius: 4px;
@@ -611,13 +631,13 @@ h3 {
     transition: background-color 0.2s;
 }
 .btn-restar:hover {
-    background-color: #BA704F;
+    background-color: #9E6C4C; 
     color: white;
 }
 
 /* Botón Eliminar (❌) */
 .btn-eliminar {
-    background-color: #a04040;
+    background-color: #A35E5B;
     color: white;
     border: none;
     padding: 5px 12px;
@@ -627,25 +647,25 @@ h3 {
     transition: background-color 0.2s;
 }
 .btn-eliminar:hover {
-    background-color: #c95151;
+    background-color: #C17F7A;
 }
 
 /* 7.5 Sección de Total */
 .total-container {
     margin-top: 30px;
     padding-top: 15px;
-    border-top: 3px solid #8D6E63;
+    border-top: 3px solid #5C3C2E; 
     text-align: right;
 }
 
 .total-container h2 {
     font-size: 1.8em;
-    color: #ff7b00;
+    color: #9E6C4C; 
 }
 
 /* 7.6 Botón Vaciar Carrito y Enlace Volver */
 #vaciar-carrito {
-    background-color: #050505;
+    background-color: #5C3C2E; 
     color: white;
     border: none;
     padding: 12px 25px;
@@ -657,27 +677,12 @@ h3 {
 }
 
 #vaciar-carrito:hover {
-    background-color: #BA704F;
+    background-color: #9E6C4C; 
 }
 
 .main-carrito a {
-    color: #BA704F;
-    text-decoration: none;
-    font-weight: bold;
+    color: #9E6C4C; 
+    text-decoration: underline;
+    font-weight: normal;
     margin-left: 20px;
-}
-
-/* 7.7 Ajuste responsivo para el Carrito */
-@media screen and (min-width: 600px) {
-    .main-carrito {
-        max-width: 800px;
-    }
-    .nombre-producto {
-        width: auto;
-        margin-bottom: 0;
-    }
-    .item-actions {
-        justify-content: space-between;
-        flex-grow: 0;
-    }
 }

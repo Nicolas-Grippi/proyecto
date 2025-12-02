@@ -2,33 +2,30 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Carrito de Compras</title>
-    <style>
-        /* Estilos básicos para el carrito */
-        body { font-family: sans-serif; padding: 20px; }
-        #lista-carrito { list-style: none; padding: 0; }
-        #lista-carrito li { border-bottom: 1px solid #eee; padding: 10px 0; display: flex; align-items: center; justify-content: space-between; }
-        .nombre-producto { font-weight: bold; margin-right: 15px; }
-        .total-container { margin-top: 20px; border-top: 2px solid #333; padding-top: 10px; }
-        .btn-eliminar, .btn-restar { cursor: pointer; border: 1px solid #ccc; padding: 5px; }
-        .btn-eliminar { background-color: #dc3545; color: white; border: none; }
-        #vaciar-carrito { background-color: #f80c0c; color: white; border: none; padding: 10px 20px; cursor: pointer; margin-top: 15px; }
-    </style>
-</head>
+    
+    <link rel="stylesheet" href="../css/style.css">
+    
+    </head>
 <body>
+    
     <main class="main-carrito"> 
         <h1>🛒 Mi Carrito de Compras</h1>
-        </main>
-
-    <ul id="lista-carrito">
-        </ul>
-    
-    <div class="total-container">
-        <h2>Total a Pagar: $<span id="total-carrito">0</span></h2>
-    </div>
-    
-    <button id="vaciar-carrito">Vaciar Carrito</button>
-    <a href="../pages/los_mas_vendidos.html" style="margin-left: 20px;">Volver a la Tienda</a>
+        
+        <ul id="lista-carrito">
+            </ul>
+        
+        <div class="total-container">
+            <h2>Total a Pagar: $<span id="total-carrito">0</span></h2>
+        </div>
+        
+        <div style="margin-top: 20px;"> 
+            <button id="vaciar-carrito">Vaciar Carrito</button>
+            
+            <a href="../pages/los_mas_vendidos.html">Volver a la Tienda</a>
+        </div>
+    </main>
 
     <script src="../js/carrito.js"></script>
 </body>
